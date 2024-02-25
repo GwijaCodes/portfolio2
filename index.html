@@ -10,10 +10,8 @@
     <title>Gloria Saija | Front-end Dev</title>
 </head>
 <body>
-    
 
-    <img class="background" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGNjcmVrNngzM21seHJ6cTdraHl0Nmc3NjNjd2h4OWNtNXE1dXk4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nmke0CSrymd9e/giphy.gif"/>
-
+    <div class="background"></div>
 
     <nav>
         <h3>
@@ -49,7 +47,7 @@
 
         const contattiScroll = document.querySelector('#contatti');
         contattiScroll.addEventListener('click', function(){
-            document.querySelector('footer').scrollIntoView(true);
+            document.querySelector('.contacts').scrollIntoView(true);
         })
     </script>
 
@@ -84,7 +82,7 @@
         </div>
         <div class="grid">
         <div class="col-50">
-        <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’Accademia di Belle Arti di Catania. Lo studio e il forte interesse verso le tecnologie del web e la grafica 3D (in particolare quella retrò!) mi hanno permesso di acquisire diverse skill fondamentali. 
+        <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’ <a href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte interesse verso le tecnologie del web e la grafica 3D (in particolare quella retrò!) mi hanno permesso di acquisire diverse skill fondamentali. 
         Padroneggiare i software e i linguaggi necessari è infatti molto importante, ma ho imparato che altrettanto importanti sono la caparbietà tipica del problem solving, l'apertura per lavorare in gruppo e imparare nuovi metodi, e ultima ma non meno importante: saper usare Google. <br>
         Non ci credi? <a href="">Scarica il mio curriculum</a></p>
         <img src="./imgs/pic.png" alt="">
@@ -98,7 +96,7 @@
  
 
     <div class="grid skillset">
-        <img class="skillset-bg" src="./imgs/skillset.svg" alt="">
+        <img src="./imgs/skillset.svg" alt="" class="skillset-bg">
         <div class="col-20">
             <div class="skill">
                 <img src="./imgs/icons/coding.png" alt="">
@@ -135,7 +133,7 @@
             <div class="skill">
                 <img src="./imgs/icons/adobe.png" alt="">
                 <ul>
-                    <li>Padronanza della suite Adobe</li>
+                    <li>Padronanza principali software Adobe</li>
                     <li>Padronanza Figma</li>
                     <li>Comprensione dei fondamentali concetti di design, UI/UX</li>
                 </ul>
@@ -157,21 +155,68 @@
         <div class="title">
             <h2 class="title-h2">PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI </h2>
         </div>
-        <div class="grid">
-               <div class="card">
-                    <div class="col-50"></div>
-                    <div class="col-50"></div>
+               <div class="card grid">
+                    <div class="col-50 img"><img src="./imgs/spazza-ad.png" alt=""></div>
+                    <div class="col-50 des">
+                        <h3>SPAZZA</h3>
+                        <span>UI/UX | FRONT-END | MODELLAZIONE 3D</span>
+                        <p>Questa applicazione web nasce da una domanda che, se vivi in un comune dove viene ritirata la raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna uscire stasera?" <br>
+                        Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non) conferire in ogni singolo bidone.</p>
+                    </div>
                  </div>
-                 <div class="card">
-                    <div class="col-50"></div>
-                    <div class="col-50"></div>
+
+                 <div class="card grid reversed">
+                     <div class="col-50 des">
+                         <h3>LUCCHESI S.R.L.</h3>
+                         <span>FRONT-END</span>
+                         <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in Aci Catena.</i></p>
+                     </div>
+                    <div class="col-50 img"><img src="./imgs/progetto-lucchesi.jpg" alt=""></div>
                  </div>
-                 <div class="card">
-                    <div class="col-50"></div>
-                    <div class="col-50"></div>
-                 </div>
-        </div>
-     
+
+                 <div class="card grid">
+                    <div class="col-50 img"><img src="./imgs/spazza-ad.png" alt=""></div>
+                    <div class="col-50 des">
+                        <h3>SPAZZA</h3>
+                        <span>UI/UX | FRONT-END</span>
+                        <p>Just Memes è un videogioco bla bla bla blabla ao;ejf;ao jfwaof. OUhawoiudh ahdiahd slidfj sefk aks iaw e! alsfdj.</p>
+                    </div>
+                 </div>          
     </div>
+
+    <div class="contacts section">
+        <img src="./imgs/skillset.svg" alt="" class="contacts-bg">
+        <div class="title">
+            <h2 class="title-h2">CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI </h2>
+        </div>
+        <div class="grid">
+            <div class="col-50"></div>
+            <div class="col-50"></div>
+        </div>
+    </div>
+
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script>
+      /*  const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        window.addEventListener('mousemove', function(e){
+            const posX = e.clientX
+            const posY = e.clientY
+
+            cursorDot.style.left = `${posX}px`
+            cursorDot.style.top = `${posY}px`
+
+            cursorOutline.style.left = `${posX}px`
+            cursorOutline.style.top = `${posY}px`
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`,
+            }, { duration: 300, fill: 'forwards'})
+        })*/
+    </script>
 </body>
 </html>
