@@ -286,7 +286,7 @@ header{
 }
 
 .about-me .gif{
-    height: 70vh;
+    max-height: 60vh;
 }
 
 /*SKILLSET*/
