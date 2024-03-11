@@ -88,7 +88,7 @@
         <img src="./imgs/pic.png" alt="">
         </div>
         <div class="col-50">
-            <video class="gif" src="./imgs/dancedance.mp4" loop autoplay playsinline poster="./imgs/poster.jpg"></video>
+            <video class="gif" src="./imgs/dancedance.mp4" autoplay loop playsinline muted poster="./imgs/poster.jpg"></video>
         </div>
     </div>
     
@@ -159,7 +159,9 @@
                     <div class="col-50 img"><img src="./imgs/spazza-ad.png" alt=""></div>
                     <div class="col-50 des">
                         <h3>SPAZZA</h3>
-                        <span>UI/UX | FRONT-END | MODELLAZIONE 3D</span>
+                        <span class="chips">
+                            <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE 3D</span> 
+                        </span>
                         <p>Questa applicazione web nasce da una domanda che, se vivi in un comune dove viene ritirata la raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna uscire stasera?" <br>
                         Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non) conferire in ogni singolo bidone.</p>
                     </div>
@@ -168,18 +170,24 @@
                  <div class="card grid reversed">
                      <div class="col-50 des">
                          <h3>LUCCHESI S.R.L.</h3>
-                         <span>FRONT-END</span>
+                         <span class="chips">
+                             <span class="chip">FRONT-END</span>
+
+                         </span>
                          <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in Aci Catena.</i></p>
                      </div>
                     <div class="col-50 img"><img src="./imgs/progetto-lucchesi.jpg" alt=""></div>
                  </div>
 
                  <div class="card grid">
-                    <div class="col-50 img"><img src="./imgs/spazza-ad.png" alt=""></div>
+                    <div class="col-50 img"><img src="./imgs/progetto-computermania.jpg" alt=""></div>
                     <div class="col-50 des">
-                        <h3>SPAZZA</h3>
-                        <span>UI/UX | FRONT-END</span>
-                        <p>Just Memes è un videogioco bla bla bla blabla ao;ejf;ao jfwaof. OUhawoiudh ahdiahd slidfj sefk aks iaw e! alsfdj.</p>
+                        <h3>COMPUTERMANIA</h3>
+                        <span class="chips">
+                            <span class="chip">FRONT-END</span>
+
+                        </span>
+                        <p>Biglietto da visita elettronico ed essenziale per negozio di elettronica e riparazioni, one-page, animato.</p>
                     </div>
                  </div>          
     </div>
@@ -190,33 +198,22 @@
             <h2 class="title-h2">CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI </h2>
         </div>
         <div class="grid">
-            <div class="col-50"></div>
-            <div class="col-50"></div>
+            <div class="col-50">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                <div class="contact-form">
+                    <input type="hidden" name="access_key" value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f">
+                    <input type="text" name="name" placeholder="Il tuo Nome" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="La tua Email" class="contact-inputs" required>
+                    <textarea name="message" placeholder="Il tuo Messaggio" class="contact-inputs" required></textarea>
+                    <button class="button" type="submit">INVIA</button>
+                </form>
+                </div>
+            </div>
+            <div class="col-50">
+                <img class="img-res" src="./imgs/ohno.png" alt="">
+            </div>
         </div>
     </div>
 
-
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <script>
-      /*  const cursorDot = document.querySelector('.cursor-dot');
-        const cursorOutline = document.querySelector('.cursor-outline');
-        window.addEventListener('mousemove', function(e){
-            const posX = e.clientX
-            const posY = e.clientY
-
-            cursorDot.style.left = `${posX}px`
-            cursorDot.style.top = `${posY}px`
-
-            cursorOutline.style.left = `${posX}px`
-            cursorOutline.style.top = `${posY}px`
-
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`,
-            }, { duration: 300, fill: 'forwards'})
-        })*/
-    </script>
 </body>
 </html>

@@ -33,6 +33,18 @@ a:hover{color: var(--blu); text-shadow: 0 0 10px var(--blu);}
     0%{transform: translateX(-50%)}
     100%{transform: translateX(0%)}
 }
+.chips{margin-top: 2%;}
+.chip{border: 1px solid var(--chiaro); max-width: fit-content; padding: 2px 6px; border-radius: 40px;display: inline; margin: 2px;}
+
+.button{
+    background-color: var(--scurissimo);
+    padding: 10px 20px;
+    color: var(--chiaro);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{color: var(--giallo); background-color: var(--blu);}
 
 
 @media (max-width: 768px){
@@ -52,35 +64,7 @@ a:hover{color: var(--blu); text-shadow: 0 0 10px var(--blu);}
     .card .des{margin-bottom: 20%;}
 }
 
-/*cursor*/
-.cursor-dot{
-    width: 5px;
-    height: 5px;
-    background-color: var(--chiaro);
-}
-
-.cursor-outline{
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--chiaro);
-}
-
-.cursor-dot, .cursor-outline{
-    position: fixed;
-    top: -100%;
-    left: -100%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 3000;
-}
-
-li:hover ~ .cursor-outline{
-    transform: scale(6);
-}
-
-.hover-this:hover ~ .cursor-outline {
-    transform: scale(8);
-  }
+::-webkit-scrollbar-thumb{background-color: var(--giallo);}
 
 /*bg*/
 
@@ -314,14 +298,36 @@ header{
 
 .card{padding: 0;}
 
-.card img{width: 100%;}
-.card .img{padding: 0;}
+.card img{width: 100%; transition: scale 1s ease;}
+.card .img{padding: 0; overflow: hidden;}
 .card .des{display: grid; place-content: center; padding: 10%;}
 .card .des p{margin-top: 5%;}
+
+.card .img:hover img{scale: 1.05; cursor: pointer;}
 
 /*CONTACTS*/
 .contacts{
     background-color: var(--giallo); margin-top: 50vh;
 }
-.contacts .title h2{color: var(--scurissimo) !important;}
+.contacts h2{color: var(--scurissimo) !important;}
 .contacts-bg{z-index: -1;position: absolute; top: 0; left: 0; width: 100vw; height: auto; transform: translateY(-50%);}
+
+.contact-form{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.contact-inputs{
+    width: 80%;
+    background: transparent;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 4px solid var(--scurissimo);
+    transition: border .2s linear;
+}
+
+.contact-inputs::placeholder{color: var(--chiaro);}
+.contact-inputs:focus{outline: none; border-bottom: 1px solid var(--scurissimo);}
