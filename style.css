@@ -174,7 +174,7 @@ nav{
     justify-content: space-between;
     padding: 4vh 10vw;
     width: 100vw;
-    height: 200px;
+    height: 100px;
     color: var(--chiaro);
     mix-blend-mode: difference;
     transition: padding .3s;
