@@ -65,6 +65,41 @@ button:hover{color: var(--giallo); background-color: var(--blu);}
 }
 
 ::-webkit-scrollbar-thumb{background-color: var(--giallo);}
+/*loader*/
+.loader{
+    background-color: var(--scurissimo);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+.loader-bar{
+    height: 100vh;
+    width: 0vw;
+    transition: .1s width ease;
+    background-color: var(--giallo);
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.loader-cube{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    z-index: 201;
+    transform: rotate(0deg);
+    animation: rotatecube 1s linear infinite;
+    mix-blend-mode: difference;
+}
+
+@keyframes rotatecube{
+    to{transform: rotate(360deg);}
+}
 
 /*bg*/
 
@@ -129,7 +164,7 @@ body::-webkit-scrollbar-thumb:hover{
    }
 
 nav{
-    position: fixed;
+    position: absolute;
     top: -2px;
     left: 0;
     z-index: 100;
