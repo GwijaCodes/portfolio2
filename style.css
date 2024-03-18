@@ -19,7 +19,7 @@ a:hover{color: var(--blu); text-shadow: 0 0 10px var(--blu);}
 .grid{display: flex; padding: 0 10%; flex-wrap: wrap;}
 .section{width: 100vw; min-height: 100vh; position: relative;}
 
-.col-20{width: 20%; padding: 10% 20px;}
+.col-20{width: 20%; padding: 10% 20px; z-index: 10;}
 .col-25{width: 25%; padding: 10% 20px;}
 .col-33{width: 33%; padding: 10% 20px;}
 .col-40{width: 40%; padding: 10% 20px;}
@@ -317,7 +317,7 @@ header{
     margin-bottom: 10%;
 }
 
-.skillset-bg{position: absolute; top: 0; left: 0; width: 100vw; z-index: -1;  min-height: 100%;}
+.skillset-bg{position: absolute; top: 0; left: 0; width: 100vw;  min-height: 100%;}
 
 .skill{
     color: var(--scurissimo);
