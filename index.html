@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <link rel="shortcut icon" href="./imgs/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js">
     <title>Gloria Saija | Front-end Dev</title>
 </head>
+
 <body>
 
     <div class="background"></div>
@@ -30,48 +33,48 @@
         </div>
     </nav>
     <script>
-       
+
 
         //salta navigazione
         const aboutmeScroll = document.querySelector('#aboutme');
-        aboutmeScroll.addEventListener('click', function(){
+        aboutmeScroll.addEventListener('click', function () {
             document.querySelector('.about-me').scrollIntoView({
                 scrollPaddingTop: '10vh'
             });
         })
 
         const progettiScroll = document.querySelector('#progetti');
-        progettiScroll.addEventListener('click', function(){
+        progettiScroll.addEventListener('click', function () {
             document.querySelector('.projects').scrollIntoView(true);
         })
 
         const contattiScroll = document.querySelector('#contatti');
-        contattiScroll.addEventListener('click', function(){
+        contattiScroll.addEventListener('click', function () {
             document.querySelector('.contacts').scrollIntoView(true);
         })
     </script>
 
     <header class="grid">
-         <div class="intro">
+        <div class="intro">
             <p>Come va? Mi chiamo Gloria Saija</p>
             <h1>FRONT-END DEV & <br>
                 3D ARTIST</h1>
-              <div class="icons">
+            <div class="icons">
                 <a href="mailto:gloriasaija2000@gmail.com">
-                <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
+                    <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
                 </a>
                 <a href="https://www.linkedin.com/in/gloria-saija-a3816b217">
-                <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
+                    <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
                 </a>
                 <a href="https://github.com/GwijaCodes">
-                <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
+                    <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
                 </a>
                 <a href="https://www.instagram.com/gwija.js/">
                     <img src="./imgs/icons/instagram.svg" fill="currentColor" style="width: 40px;" alt="">
-                    </a>
-            </div>  
+                </a>
+            </div>
             <img class="img-res rotating-head" src="./imgs/rotatehead.gif" alt="">
-        </div> 
+        </div>
     </header>
     </div>
 
@@ -80,18 +83,24 @@
             <h2 class="title-h2">ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME </h2>
         </div>
         <div class="grid animated-element">
-        <div class="col-50">
-        <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’ <a href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte interesse verso le tecnologie del web e la grafica 3D (in particolare quella retrò!) mi hanno permesso di acquisire diverse skill fondamentali. 
-        Padroneggiare i software e i linguaggi necessari è infatti molto importante, ma ho imparato che altrettanto importanti sono la caparbietà tipica del problem solving, l'apertura per lavorare in gruppo e imparare nuovi metodi, e ultima ma non meno importante: saper usare Google. <br>
-        Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
-        <img src="./imgs/pic.png" alt="">
-        </div>
-        <div class="col-50">
-            <video class="gif" src="./imgs/dancedance.mp4" autoplay loop playsinline muted poster="./imgs/poster.jpg"></video>
+            <div class="col-50">
+                <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’ <a
+                        href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte
+                    interesse verso le tecnologie del web e la grafica 3D (in particolare quella retrò!) mi hanno
+                    permesso di acquisire diverse skill fondamentali.
+                    Padroneggiare i software e i linguaggi necessari è infatti molto importante, ma ho imparato che
+                    altrettanto importanti sono la caparbietà tipica del problem solving, l'apertura per lavorare in
+                    gruppo e imparare nuovi metodi, e ultima ma non meno importante: saper usare Google. <br>
+                    Non ci credi? <a href="./imgs/Curriculum_GloriaSaija.pdf">Scarica il mio curriculum</a></p>
+                <img src="./imgs/pic.png" alt="">
+            </div>
+            <div class="col-50">
+                <video class="gif" src="./imgs/dancedance.mp4" autoplay loop playsinline muted
+                    poster="./imgs/poster.jpg"></video>
+            </div>
         </div>
     </div>
-</div>
- 
+
 
     <div class="grid skillset">
         <img src="./imgs/skillset.svg" alt="" class="skillset-bg">
@@ -112,7 +121,7 @@
                     <li>Manipolazione DOM</li>
                     <li>Progressive Web Apps</li>
                     <li>Web components</li>
-                    <li>Conoscenza di React.js</li>
+                    <li>API e funzioni async</li>
                 </ul>
             </div>
         </div>
@@ -153,55 +162,62 @@
         <div class="title">
             <h2 class="title-h2">PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI </h2>
         </div>
-               <div class="card grid">
-                    
-                    <div class="col-50 img">
-                        <a class="project" href="https://gwijacodes.github.io/myspazza/" target="_blank">
-                            <img src="./imgs/spazza-ad.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-50 des">
-                        <h3>SPAZZA</h3>
-                        <span class="chips">
-                            <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE 3D</span> 
-                        </span>
-                        <p>Questa applicazione web nasce da una domanda che, se vivi in un comune dove viene ritirata la raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna uscire stasera?" <br>
-                        Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non) conferire in ogni singolo bidone.</p>
-                    </div>
-                 </div>
-                 <div class="card grid reversed">
-           
-                    <div class="col-50 des">
-                         <h3>LUCCHESI S.R.L.</h3>
-                         <span class="chips">
-                             <span class="chip">FRONT-END</span>
-         
-                         </span>
-                         <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in Aci Catena.</i></p>
-                     </div>
-                     <div class="col-50 img">
-                        <a href="https://gwijacodes.github.io/lucchesisrl/" target="_blank">
-                            <img src="./imgs/progetto-lucchesi.jpg" alt=""  loading="lazy">
-                        </a>
-                    </div> 
-                 </div>
-           
+        <div class="card grid">
 
-                 <div class="card grid">
-                    <div class="col-50 img">
-                        <a href="https://gwijacodes.github.io/computermania2/" target="_blank">
-                            <img src="./imgs/progetto-computermania.jpg" alt=""  loading="lazy">
-                        </a>
-                    </div>
-                    <div class="col-50 des">
-                        <h3>COMPUTERMANIA</h3>
-                        <span class="chips">
-                            <span class="chip">FRONT-END</span>
+            <div class="col-50 img">
+                <a class="project" href="https://gwijacodes.github.io/myspazza/" target="_blank">
+                    <img src="./imgs/spazza-ad.png" alt="">
+                </a>
+            </div>
+            <div class="col-50 des">
+                <h3>SPAZZA</h3>
+                <span class="chips">
+                    <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE
+                        3D</span>
+                </span>
+                <p>Questa applicazione web nasce da una domanda che, se vivi in un comune dove viene ritirata la
+                    raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna
+                    uscire stasera?" <br>
+                    Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
+                    conferire in ogni singolo bidone.</p>
+            </div>
+        </div>
+        <div class="card grid reversed">
 
-                        </span>
-                        <p>Biglietto da visita elettronico ed essenziale per negozio di elettronica e riparazioni, one-page, animato.</p>
-                    </div>
-                 </div>          
+            <div class="col-50 des">
+                <h3>LUCCHESI S.R.L.</h3>
+                <span class="chips">
+                    <span class="chip">FRONT-END</span>
+
+                </span>
+                <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di
+                    spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in
+                        Aci Catena.</i></p>
+            </div>
+            <div class="col-50 img">
+                <a href="https://gwijacodes.github.io/lucchesisrl/" target="_blank">
+                    <img src="./imgs/progetto-lucchesi.jpg" alt="" loading="lazy">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="card grid">
+            <div class="col-50 img">
+                <a href="https://gwijacodes.github.io/computermania2/" target="_blank">
+                    <img src="./imgs/progetto-computermania.jpg" alt="" loading="lazy">
+                </a>
+            </div>
+            <div class="col-50 des">
+                <h3>COMPUTERMANIA</h3>
+                <span class="chips">
+                    <span class="chip">FRONT-END</span>
+
+                </span>
+                <p>Biglietto da visita elettronico ed essenziale per negozio di elettronica e riparazioni, one-page,
+                    animato.</p>
+            </div>
+        </div>
     </div>
 
     <div class="contacts section">
@@ -212,24 +228,25 @@
         <div class="grid">
             <div class="col-50">
                 <form action="https://api.web3forms.com/submit" method="POST">
-                <div class="contact-form">
-                    <input type="hidden" name="access_key" value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f">
-                    <input type="text" name="name" placeholder="Il tuo Nome" class="contact-inputs" required>
-                    <input type="email" name="email" placeholder="La tua Email" class="contact-inputs" required>
-                    <textarea name="message" placeholder="Il tuo Messaggio" class="contact-inputs" required></textarea>
-                    <button class="button" type="submit">INVIA</button>
+                    <div class="contact-form">
+                        <input type="hidden" name="access_key" value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f">
+                        <input type="text" name="name" placeholder="Il tuo Nome" class="contact-inputs" required>
+                        <input type="email" name="email" placeholder="La tua Email" class="contact-inputs" required>
+                        <textarea name="message" placeholder="Il tuo Messaggio" class="contact-inputs"
+                            required></textarea>
+                        <button class="button" type="submit">INVIA</button>
                 </form>
-                </div>
-            </div>
-            <div class="col-50">
-                <img class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
             </div>
         </div>
+        <div class="col-50">
+            <img class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
+        </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     <script>
         const loaderBar = document.querySelector('.loader-bar');
@@ -239,47 +256,56 @@
             console.log('ready')
         }, 50)
         window.addEventListener('load', () => {
-                console.log('set')
-                loaderBar.style.width = '100vw'
-                setTimeout(() => {
+            console.log('set')
+            loaderBar.style.width = '100vw'
+            setTimeout(() => {
                 loader.style.display = 'none';
-                }, 500)
-            })
+            }, 500)
+        })
 
-        document.addEventListener("DOMContentLoaded", function(){
+
+        //background scroll parallax
+        window.addEventListener('scroll', () => {
+            const distance = window.scrollY;
+            const bg = document.querySelector('.background').style.backgroundPositionY = `${distance}px`;
+
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
 
 
             //gsap scroll animations
             gsap.registerPlugin(ScrollTrigger);
 
             gsap.to('.animated-element', {
-            opacity: 0,
-            y: '-25%',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.animated-element',
-                start: 'center center',
-                end: 'bottom center',
-                scrub: 1,
+                opacity: 0,
+                y: '-25%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.animated-element',
+                    start: 'center center',
+                    end: 'bottom center',
+                    scrub: 1,
 
-            }
+                }
             })
         })
-        
+
         //smooth scroll
         const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
-        console.log(e)
+            console.log(e)
         })
 
         function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+            lenis.raf(time)
+            requestAnimationFrame(raf)
         }
 
         requestAnimationFrame(raf)
     </script>
 
 </body>
+
 </html>
