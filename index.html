@@ -11,7 +11,6 @@
         media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high">
     <link rel="shortcut icon" href="./imgs/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js">
     <meta name="description" content="Ciao, sono Gloria Saija, Front End Developer e 3D Artist">
     <title>Gloria Saija | Front-end Dev</title>
 </head>
@@ -247,11 +246,6 @@
         </div>
     </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-
     <script>
         const loaderBar = document.querySelector('.loader-bar');
         const loader = document.querySelector('.loader');
@@ -275,39 +269,7 @@
 
         })
 
-        document.addEventListener("DOMContentLoaded", function () {
-
-
-            //gsap scroll animations
-            gsap.registerPlugin(ScrollTrigger);
-
-            gsap.to('.animated-element', {
-                opacity: 0,
-                y: '-25%',
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '.animated-element',
-                    start: 'center center',
-                    end: 'bottom center',
-                    scrub: 1,
-
-                }
-            })
-        })
-
-        //smooth scroll
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
+      
     </script>
 
 </body>
