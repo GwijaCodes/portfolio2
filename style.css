@@ -231,13 +231,13 @@ button:hover {
 .background {
     width: 100vw;
     height: 100vh;
-    background: url('https://static.wixstatic.com/media/2995c7_383653275c9b459b852449853aabf5bf~mv2.gif') center top;
+    background: url('./imgs/cool.jpg') center top;
     position: absolute;
     background-size: cover;
     top: 0;
     left: 0;
     z-index: -1000;
-    filter: saturate(.1) brightness(.1) contrast(1);
+    filter: saturate(.1) brightness(.5) contrast(1);
 }
 
 /*navbar*/
@@ -447,8 +447,12 @@ header {
     padding-top: 0;
 }
 
-.about-me .gif {
-    max-height: 60vh;
+.animated {
+    overflow: hidden;
+}
+
+.gif {
+    width: 100%;
 }
 
 /*SKILLSET*/
