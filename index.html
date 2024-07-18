@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -36,7 +37,6 @@
         </div>
     </nav>
     <script>
-
 
         //salta navigazione
         const aboutmeScroll = document.querySelector('#aboutme');
@@ -85,7 +85,7 @@
         <div class="title">
             <h2 class="title-h2">ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME </h2>
         </div>
-        <div class="grid animated-element">
+        <div class="grid">
             <div class="col-50">
                 <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’ <a
                         href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte
@@ -95,10 +95,10 @@
                     altrettanto importanti sono la caparbietà tipica del problem solving, l'apertura per lavorare in
                     gruppo e imparare nuovi metodi, e ultima ma non meno importante: saper usare Google. <br>
                     Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
-                <img src="./imgs/pic.png" alt="">
+                <img data-aos="fade-left" src="./imgs/pic.png" alt="gs">
             </div>
-            <div class="col-50 animated">
-                <video class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
+            <div class="col-50">
+                <video data-aos="fade-up" class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
                     poster="./imgs/poster.jpg"></video>
             </div>
         </div>
@@ -106,7 +106,7 @@
     </div>
 
 
-    <div class="grid skillset">
+    <div data-aos="fade-up" data-aos-duration="2000" class="grid skillset">
         <img src="./imgs/skillset.svg" alt="" class="skillset-bg">
         <div class="col-20">
             <div class="skill">
@@ -166,7 +166,7 @@
         <div class="title">
             <h2 class="title-h2">PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI </h2>
         </div>
-        <div class="card grid">
+        <div class="card grid" data-aos="fade-left" data-aos-offset="500">
 
             <div class="col-50 img">
                 <a class="project" href="https://gwijacodes.github.io/myspazza/" target="_blank">
@@ -179,14 +179,16 @@
                     <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE
                         3D</span>
                 </span>
-                <p>Questa applicazione web nasce da una domanda che, se vivi in un comune dove viene ritirata la
+                <p>Questa applicazione web nasce da una domanda che, se
+                    vivi in un comune dove
+                    viene ritirata la
                     raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna
                     uscire stasera?" <br>
                     Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
                     conferire in ogni singolo bidone.</p>
             </div>
         </div>
-        <div class="card grid reversed">
+        <div class="card grid reversed" data-aos="fade-right" data-aos-offset="500">
 
             <div class="col-50 des">
                 <h3>LUCCHESI S.R.L.</h3>
@@ -204,9 +206,7 @@
                 </a>
             </div>
         </div>
-
-
-        <div class="card grid">
+        <div class="card grid" data-aos="fade-left" data-aos-offset="500">
             <div class="col-50 img">
                 <a href="https://gwijacodes.github.io/computermania2/" target="_blank">
                     <img src="./imgs/progetto-computermania.jpg" alt="" loading="lazy">
@@ -243,11 +243,10 @@
             </div>
         </div>
         <div class="col-50">
-            <img class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
+            <img data-aos="fade-right" data-aos-delay="300" class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
         </div>
     </div>
     </div>
-
 
     <script>
         const loaderBar = document.querySelector('.loader-bar');
@@ -272,6 +271,11 @@
 
         })
 
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>
