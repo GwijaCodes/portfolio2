@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high">
+    <link rel="shortcut icon" href="./imgs/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ciao, sono Gloria Saija, Front End Developer e 3D Artist">
+    <title>Gloria Saija | Front-end Dev</title>
+</head>
+
+<body>
+
+    <div class="background"></div>
+    <div class="loader">
+        <div class="loader-bar"></div>
+        <div class="loader-cube"></div>
+    </div>
+
+    <nav>
+        <h3>
+            <a href="#"><img style="width: 22px;" src="./imgs/icons/nav-ico.png" alt=""></a>
+        </h3>
+        <div class="navigation">
+            <ul>
+                <li id="aboutme">About me</li>
+                <li id="progetti">Progetti</li>
+                <li id="contatti">Contatti</li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+
+
+        //salta navigazione
+        const aboutmeScroll = document.querySelector('#aboutme');
+        aboutmeScroll.addEventListener('click', function () {
+            document.querySelector('.about-me').scrollIntoView({
+                scrollPaddingTop: '10vh'
+            });
+        })
+
+        const progettiScroll = document.querySelector('#progetti');
+        progettiScroll.addEventListener('click', function () {
+            document.querySelector('.projects').scrollIntoView(true);
+        })
+
+        const contattiScroll = document.querySelector('#contatti');
+        contattiScroll.addEventListener('click', function () {
+            document.querySelector('.contacts').scrollIntoView(true);
+        })
+    </script>
+
+    <header class="grid">
+        <div class="intro">
+            <p>Come va? Mi chiamo Gloria Saija</p>
+            <h1>FRONT-END DEV & <br>
+                3D ARTIST</h1>
+            <div class="icons">
+                <a href="mailto:gloriasaija2000@gmail.com">
+                    <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/gloria-saija-a3816b217">
+                    <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
+                </a>
+                <a href="https://github.com/GwijaCodes">
+                    <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
+                </a>
+                <a href="https://www.instagram.com/gwija.js/">
+                    <img src="./imgs/icons/instagram.svg" fill="currentColor" style="width: 40px;" alt="">
+                </a>
+            </div>
+            <video class="img-res rotating-head" src="./imgs/rotatehead.webm" autoplay loop playsinline muted></video>
+        </div>
+    </header>
+    </div>
+
+    <div class="about-me section">
+        <div class="title">
+            <h2 class="title-h2">ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME </h2>
+        </div>
+        <div class="grid animated-element">
+            <div class="col-50">
+                <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’ <a
+                        href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte
+                    interesse verso le tecnologie del web e la grafica 3D (in particolare quella retrò!) mi hanno
+                    permesso di acquisire diverse skill fondamentali.
+                    Padroneggiare i software e i linguaggi necessari è infatti molto importante, ma ho imparato che
+                    altrettanto importanti sono la caparbietà tipica del problem solving, l'apertura per lavorare in
+                    gruppo e imparare nuovi metodi, e ultima ma non meno importante: saper usare Google. <br>
+                    Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
+                <img src="./imgs/pic.png" alt="">
+            </div>
+            <div class="col-50 animated">
+                <video class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
+                    poster="./imgs/poster.jpg"></video>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="grid skillset">
+        <img src="./imgs/skillset.svg" alt="" class="skillset-bg">
+        <div class="col-20">
+            <div class="skill">
+                <img src="./imgs/icons/coding.png" alt="">
+                <ul>
+                    <li>Responsive web design</li>
+                    <li>Best practices nella scrittura del codice</li>
+                    <li>Ricerca ed entusiasmo verso nuovi modi per implementare in modo smart</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-20">
+            <div class="skill">
+                <img src="./imgs/icons/js.png" alt="">
+                <ul>
+                    <li>Manipolazione DOM</li>
+                    <li>Progressive Web Apps</li>
+                    <li>Web components</li>
+                    <li>React js</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-20">
+            <div class="skill">
+                <img src="./imgs/icons/blender.png" alt="">
+                <ul>
+                    <li>Modellazione organica, poligonale, superficiale</li>
+                    <li>Character modeling, product modeling</li>
+                    <li>Shading procedurale</li>
+                    <li>Keyframes animation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-20">
+            <div class="skill">
+                <img src="./imgs/icons/adobe.png" alt="">
+                <ul>
+                    <li>Padronanza principali software Adobe</li>
+                    <li>Padronanza Figma</li>
+                    <li>Comprensione dei fondamentali concetti di design, UI/UX</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-20">
+            <div class="skill">
+                <img src="./imgs/icons/altro.png" alt="">
+                <ul>
+                    <li>Inglese fluente</li>
+                    <li>Attitudine al team work</li>
+                    <li>Spiccato problem solving in ogni ambito</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects section">
+        <div class="title">
+            <h2 class="title-h2">PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI </h2>
+        </div>
+        <div class="card grid">
+
+            <div class="col-50 img">
+                <a class="project" href="https://gwijacodes.github.io/myspazza/" target="_blank">
+                    <img src="./imgs/spazza-ad.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-50 des">
+                <h3>SPAZZA</h3>
+                <span class="chips">
+                    <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE
+                        3D</span>
+                </span>
+                <p>Questa applicazione web nasce da una domanda che, se vivi in un comune dove viene ritirata la
+                    raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna
+                    uscire stasera?" <br>
+                    Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
+                    conferire in ogni singolo bidone.</p>
+            </div>
+        </div>
+        <div class="card grid reversed">
+
+            <div class="col-50 des">
+                <h3>LUCCHESI S.R.L.</h3>
+                <span class="chips">
+                    <span class="chip">FRONT-END</span>
+
+                </span>
+                <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di
+                    spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in
+                        Aci Catena.</i></p>
+            </div>
+            <div class="col-50 img">
+                <a href="https://gwijacodes.github.io/lucchesisrl/" target="_blank">
+                    <img src="./imgs/progetto-lucchesi.jpg" alt="" loading="lazy">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="card grid">
+            <div class="col-50 img">
+                <a href="https://gwijacodes.github.io/computermania2/" target="_blank">
+                    <img src="./imgs/progetto-computermania.jpg" alt="" loading="lazy">
+                </a>
+            </div>
+            <div class="col-50 des">
+                <h3>COMPUTERMANIA</h3>
+                <span class="chips">
+                    <span class="chip">FRONT-END</span>
+
+                </span>
+                <p>Biglietto da visita elettronico ed essenziale per negozio di elettronica e riparazioni, one-page,
+                    animato.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts section">
+        <img src="./imgs/skillset.svg" alt="" class="contacts-bg">
+        <div class="title">
+            <h2 class="title-h2">CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI </h2>
+        </div>
+        <div class="grid">
+            <div class="col-50">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <div class="contact-form">
+                        <input type="hidden" name="access_key" value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f">
+                        <input type="text" name="name" placeholder="Il tuo Nome" class="contact-inputs" required>
+                        <input type="email" name="email" placeholder="La tua Email" class="contact-inputs" required>
+                        <textarea name="message" placeholder="Il tuo Messaggio" class="contact-inputs"
+                            required></textarea>
+                        <button class="button" type="submit">INVIA</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-50">
+            <img class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        const loaderBar = document.querySelector('.loader-bar');
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loaderBar.style.width = '30vw';
+            console.log('ready')
+        }, 50)
+        window.addEventListener('load', () => {
+            console.log('set')
+            loaderBar.style.width = '100vw'
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500)
+        })
+
+
+        //background scroll parallax
+        window.addEventListener('scroll', () => {
+            const distance = window.scrollY;
+            const bg = document.querySelector('.background').style.backgroundPositionY = `${distance / 1.5}px`;
+
+        })
+
+    </script>
+
+</body>
+
+</html>
