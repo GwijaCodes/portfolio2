@@ -561,3 +561,28 @@ header {
     outline: none;
     border-bottom: 1px solid var(--scurissimo);
 }
+
+.final{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.final-icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.final-icons a img{
+    transform: translateY(0);
+    filter: saturate(0);
+    transition: all 200ms;
+}
+
+.final-icons a:hover img{
+    filter: saturate(0) brightness(.6);
+}
