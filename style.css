@@ -231,13 +231,26 @@ button:hover {
 .background {
     width: 100vw;
     height: 100vh;
-    background: url('./imgs/cool.jpg') center top;
+    background: url('./imgs/cool.jpg');
     position: absolute;
     background-size: cover;
     top: 0;
     left: 0;
     z-index: -1000;
-    filter: saturate(.1) brightness(.5) contrast(1);
+    filter: saturate(.1) brightness(.5) contrast(.86);
+    /* animation: bg 20s ease infinite; */
+}
+
+
+/* bg follows mouse? */
+@keyframes bg{
+    0%, 100%{
+        background-position-y: 40%;
+    }
+    50%{
+        background-position-y: 60%;
+
+    }
 }
 
 /*navbar*/
@@ -251,7 +264,7 @@ button:hover {
 :root {
     --chiaro: #d9d9d9;
     --blu: #0056C6;
-    --scurissimo: #101010;
+    --scurissimo: #151515;
     --giallo: #E49600;
 }
 
