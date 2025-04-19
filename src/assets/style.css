@@ -90,7 +90,7 @@ a:hover {
 }
 
 .section-title-container{
-    margin: 2vh auto;
+    margin: 2vh auto 8vh;
     width: 80vw;
     padding: 0;
     color: #fff !important;
@@ -103,9 +103,9 @@ a:hover {
 
 }
 .section-title-container .subtitle{
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    font-weight: light;
+    font-weight: 100;
 }
 
 
@@ -565,42 +565,3 @@ header {
 .final-icons a:hover img{
     filter: saturate(0) brightness(.6);
 }
-
-.windows-container {
-    border: 2px solid var(--blu);
-    width: 300px;
-    background: var(--scurissimo);
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    transition: top 0.1s ease, left 0.1s ease;
-  }
-
-  .windows-header {
-    background-color: var(--blu);
-    color: white;
-    padding: 0.3rem 0.6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
-  }
-
-  .windows-header .close-btn {
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: auto;
-    margin-left: 0.2rem;
-    color: var(--scurissimo);
-  }
-
-  .windows-content {
-    padding: 1rem;
-  }
-
-  .windows-content img {
-    width: 100%;
-    display: block;
-    border: 1px solid #ccc;
-  }

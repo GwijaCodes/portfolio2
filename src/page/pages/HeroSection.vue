@@ -1,5 +1,7 @@
 <script setup>
 import Shapes from '@/assets/imgs/cool.jpg'
+import RotatingHead from '@/assets/imgs/rotatehead.webm'
+
 import { IconBrandLinkedin, IconMailOpened, IconBrandGithub, IconBrandInstagram } from '@tabler/icons-vue';
 </script>
 
@@ -23,7 +25,14 @@ import { IconBrandLinkedin, IconMailOpened, IconBrandGithub, IconBrandInstagram 
                     <IconBrandInstagram class="icon" />
                 </a>
             </div>
-            <video class="img-res rotating-head" src="./imgs/rotatehead.webm" autoplay loop playsinline muted></video>
+            <video class="img-res rotating-head" :src="RotatingHead" autoplay loop playsinline muted></video>
         </div>
     </header>
 </template>
+
+<style scoped>
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+</style>

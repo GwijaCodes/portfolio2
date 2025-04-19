@@ -1,41 +1,38 @@
-<script setup lang="ts">
+<script setup>
 import ScrollingTitle from './components/ScrollingTitle.vue';
-
+import DodgyWindow from './components/DodgyWindow.vue';
+import DanceDance from '@/assets/imgs/dancedance.webm'
+import MyPic from '@/assets/imgs/pic.png'
 </script>
 
 <template>
     <ScrollingTitle :text="'ABOUT ME'" />
     <div class="about-me section">
         <div class="section-title-container">
-            <h2 class="section-title">DIMMI QUALCOSA CHE NON SO...</h2>
-            <p class="subtitle">Dato che non hai skippato questa sezione, e’ arrivato il momento di parlarti un po’ di
-                me.</p>
+            <h2 class="section-title">DIMMI QUALCOSA CHE NON SO</h2>
+            <p class="subtitle">
+                Dato che non hai skippato questa sezione, e’ arrivato il momento di parlarti un po’ di me.
+            </p>
         </div>
         <div class="grid">
             <div class="col-50">
-                <p>Sono una developer con un background in Arti Tecnologiche, laureata all’<a
-                        href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Vivo ad Acireale e
+                <p>
+                    Sono una developer con un background in Arti Tecnologiche, laureata all’
+                    <a href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Vivo ad Acireale e
                     lavoro nel mondo del web, dove unisco creatività e tecnica.
                     Ho sempre avuto un debole per la grafica 3D (soprattutto quella retrò!) e, da quando ho iniziato a
                     sviluppare, ho ampliato le mie competenze affrontando sfide sempre nuove.
                     Se c’è una cosa che ho capito, è che conoscere strumenti e linguaggi è fondamentale, ma lo è
                     altrettanto sapersi orientare tra ostacoli inaspettati, collaborare con gli altri e rimanere
-                    curiosi. Ah, e naturalmente… saper cercare su Google! <br>
-                    Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
-
-                <img data-aos="fade-left" src="./imgs/pic.png" alt="gs">
+                    curiosi. Ah, e naturalmente… saper cercare su Google! <br />
+                    Non ci credi?
+                    <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a>
+                </p>
             </div>
             <div class="col-50">
-                <div style="position: relative">
-                    <div class="windows-container" id="dodgyWindow">
-                        <div class="windows-header">
-                            <span class="close-btn">X</span>
-                        </div>
-                        <div class="windows-content">
-                            <video data-aos="fade-up" class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline
-                                muted poster="./imgs/poster.jpg"></video>
-                        </div>
-                    </div>
+                <div class="windows-stack">
+                    <DodgyWindow id="danceDance" :video-src="DanceDance" class="window-video" />
+                    <DodgyWindow id="myPic" :imageSrc="MyPic" class="window-pic" />
                 </div>
             </div>
         </div>
@@ -49,7 +46,6 @@ import ScrollingTitle from './components/ScrollingTitle.vue';
     color: var(--chiaro);
 }
 
-
 .about-me .grid {
     margin: auto;
     width: 80vw;
@@ -60,11 +56,26 @@ import ScrollingTitle from './components/ScrollingTitle.vue';
     padding-top: 0;
 }
 
-.animated {
-    overflow: hidden;
+.windows-stack {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 30px;
 }
 
-.gif {
-    width: 100%;
+.window-pic {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 2;
+    transform: scale(0.7);
+}
+
+.window-video {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 50px;
+    z-index: 1;
 }
 </style>

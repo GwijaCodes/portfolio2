@@ -32,8 +32,8 @@ const repeatedText = computed(() => `${props.text} `.repeat(props.repeat).trim()
 }
 
 .title {
-    border-top: 4px solid var(--chiaro);
-    border-bottom: 4px solid var(--chiaro);
+    border-top: 1px solid var(--giallo);
+    border-bottom: 1px solid var(--giallo);
     width: 100vw;
     height: min-content;
     padding: 10px 0;
@@ -58,7 +58,8 @@ const repeatedText = computed(() => `${props.text} `.repeat(props.repeat).trim()
     margin: 0;
     font-size: 64px;
     white-space: nowrap;
-    color: var(--giallo);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--giallo);
     animation: section-title 10s linear infinite;
 }
 
