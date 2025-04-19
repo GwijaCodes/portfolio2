@@ -12,9 +12,9 @@ defineProps<{
             <span class="close-btn">X</span>
         </div>
         <div class="windows-content">
-            <video v-if="videoSrc" data-aos="fade-up" class="gif" :src="videoSrc" autoplay loop playsinline muted
+            <video v-if="videoSrc" class="gif" :src="videoSrc" autoplay loop playsinline muted
                 :poster="poster" />
-            <img v-else-if="imageSrc" data-aos="fade-up" class="image" :src="imageSrc" alt="window content" />
+            <img v-else-if="imageSrc" class="image" :src="imageSrc" alt="window content" />
             <p v-else>Nessun contenuto disponibile.</p>
         </div>
     </div>

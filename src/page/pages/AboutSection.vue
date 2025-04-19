@@ -3,6 +3,7 @@ import ScrollingTitle from './components/ScrollingTitle.vue';
 import DodgyWindow from './components/DodgyWindow.vue';
 import DanceDance from '@/assets/imgs/dancedance.webm'
 import MyPic from '@/assets/imgs/pic.png'
+import CVPDF from '@/assets/imgs/SaijaGloria_CV.pdf'
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import MyPic from '@/assets/imgs/pic.png'
             <div class="col-50">
                 <p>
                     Sono una developer con un background in Arti Tecnologiche, laureata all’
-                    <a href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Vivo ad Acireale e
+                    <a href="https://www.abacatania.it/" target="_blank" rel="noopener noreferrer">Accademia di Belle Arti di Catania</a>. Vivo ad Acireale e
                     lavoro nel mondo del web, dove unisco creatività e tecnica.
                     Ho sempre avuto un debole per la grafica 3D (soprattutto quella retrò!) e, da quando ho iniziato a
                     sviluppare, ho ampliato le mie competenze affrontando sfide sempre nuove.
@@ -26,13 +27,13 @@ import MyPic from '@/assets/imgs/pic.png'
                     altrettanto sapersi orientare tra ostacoli inaspettati, collaborare con gli altri e rimanere
                     curiosi. Ah, e naturalmente… saper cercare su Google! <br />
                     Non ci credi?
-                    <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a>
+                    <a :href="CVPDF" >Scarica il mio curriculum</a>
                 </p>
             </div>
             <div class="col-50">
                 <div class="windows-stack">
                     <DodgyWindow id="danceDance" :video-src="DanceDance" class="window-video" />
-                    <DodgyWindow id="myPic" :imageSrc="MyPic" class="window-pic" />
+                    <img :src="MyPic" class="window-pic" />
                 </div>
             </div>
         </div>
@@ -56,6 +57,10 @@ import MyPic from '@/assets/imgs/pic.png'
     padding-top: 0;
 }
 
+.about-me .col-50 p {
+    
+}
+
 .windows-stack {
     width: 100%;
     height: auto;
@@ -65,10 +70,11 @@ import MyPic from '@/assets/imgs/pic.png'
 
 .window-pic {
     position: absolute;
-    top: 120px;
+    top: 200px;
     left: 0;
     z-index: 2;
     transform: scale(0.7);
+    border-radius: 6px;
 }
 
 .window-video {

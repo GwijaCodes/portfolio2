@@ -1,5 +1,11 @@
 <template>
-    <div data-aos="fade-up" data-aos-duration="2000" class="grid skillset">
+    <div class="grid skillset">
+        <div class="section-title-container">
+            <h2 class="section-title">LO SO FARE ANCH'IO!</h2>
+            <p class="subtitle">
+                Dato che non hai skippato questa sezione, e’ arrivato il momento di parlarti un po’ di me.
+            </p>
+        </div>
         <img src="./imgs/skillset.svg" alt="" class="skillset-bg">
         <div class="col-20">
             <div class="skill">
