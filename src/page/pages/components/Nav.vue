@@ -1,5 +1,5 @@
 <script setup>
-import NavIco from '@/public/imgs/icons/nav-ico.png'
+import NavIco from '@/assets/imgs/icons/nav-ico.png'
 </script>
 
 <template>

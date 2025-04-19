@@ -1,383 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <script type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":"bottom-right","perPurposeConsent":true,"siteId":3679920,"whitelabel":false,"cookiePolicyId":89294495,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonRejects":true,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","showTitle":false }};
-        </script>
-        <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3679920.js"></script>
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high">
-    <link rel="shortcut icon" href="./imgs/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Ciao, sono Gloria Saija, Front End Developer e 3D Artist">
-    <title>Gloria Saija | Front-end Dev</title>
-</head>
-
-<body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <div class="background"></div>
-    <div class="loader">
-        <div class="loader-bar"></div>
-        <div class="loader-cube"></div>
-    </div>
-
-    <nav>
-        <h3>
-            <a href="#"><img style="width: 22px;" src="./imgs/icons/nav-ico.png" alt=""></a>
-        </h3>
-        <div class="navigation">
-            <ul>
-                <li id="aboutme">About me</li>
-                <li id="progetti">Progetti</li>
-                <li id="contatti">Contatti</li>
-            </ul>
-        </div>
-    </nav>
-    <script>
-
-        //salta navigazione
-        const aboutmeScroll = document.querySelector('#aboutme');
-        aboutmeScroll.addEventListener('click', function () {
-            document.querySelector('.about-me').scrollIntoView({
-                scrollPaddingTop: '10vh'
-            });
-        })
-
-        const progettiScroll = document.querySelector('#progetti');
-        progettiScroll.addEventListener('click', function () {
-            document.querySelector('.projects').scrollIntoView(true);
-        })
-
-        const contattiScroll = document.querySelector('#contatti');
-        contattiScroll.addEventListener('click', function () {
-            document.querySelector('.contacts').scrollIntoView(true);
-        })
-    </script>
-
-    <header class="grid">
-        <div class="intro">
-            <p>Come va? Mi chiamo Gloria Saija</p>
-            <h1>FRONT-END DEV & <br>
-                3D ARTIST</h1>
-            <div class="icons">
-                <a href="mailto:gloriasaija2000@gmail.com">
-                    <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/gloria-saija-a3816b217">
-                    <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
-                </a>
-                <a href="https://github.com/GwijaCodes">
-                    <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-                <a href="https://www.instagram.com/gwija.js/">
-                    <img src="./imgs/icons/instagram.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-            </div>
-            <video class="img-res rotating-head" src="./imgs/rotatehead.webm" autoplay loop playsinline muted></video>
-        </div>
-    </header>
-    </div>
-
-    <div class="about-me section">
-        <div class="title">
-            <h2 class="title-h2">ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME </h2>
-        </div>
-        <div class="section-title-container">
-            <h2 class="section-title">DIMMI QUALCOSA CHE NON SO...</h2>
-            <p class="subtitle">Dato che  non hai skippato questa sezione, e’ arrivato il momento di parlarti un po’ di me.</p>
-        </div>
-        <div class="grid">
-            <div class="col-50">
-                <p>Sono una developer con un background in Arti Tecnologiche, laureata all’<a
-                    href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Vivo ad Acireale e
-                lavoro nel mondo del web, dove unisco creatività e tecnica.
-                Ho sempre avuto un debole per la grafica 3D (soprattutto quella retrò!) e, da quando ho iniziato a
-                sviluppare, ho ampliato le mie competenze affrontando sfide sempre nuove.
-                Se c’è una cosa che ho capito, è che conoscere strumenti e linguaggi è fondamentale, ma lo è
-                altrettanto sapersi orientare tra ostacoli inaspettati, collaborare con gli altri e rimanere
-                curiosi. Ah, e naturalmente… saper cercare su Google! <br>
-                Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
-
-                <img data-aos="fade-left" src="./imgs/pic.png" alt="gs">
-            </div>
-            <div class="col-50">
-                <div style="position: relative">
-                    <div class="windows-container" id="dodgyWindow">
-                        <div class="windows-header">
-                          <span class="close-btn">X</span>
-                        </div>
-                        <div class="windows-content">
-                          <video data-aos="fade-up" class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
-                              poster="./imgs/poster.jpg"></video>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    <div data-aos="fade-up" data-aos-duration="2000" class="grid skillset">
-        <img src="./imgs/skillset.svg" alt="" class="skillset-bg">
-        <div class="col-20">
-            <div class="skill">
-                <img src="./imgs/icons/coding.png" alt="">
-                <ul>
-                    <li>Responsive web design</li>
-                    <li>Best practices nella scrittura del codice</li>
-                    <li>Ricerca ed entusiasmo verso nuovi modi per implementare in modo smart</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-20">
-            <div class="skill">
-                <img src="./imgs/icons/js.png" alt="">
-                <ul>
-                    <li>Manipolazione DOM</li>
-                    <li>Progressive Web Apps</li>
-                    <li>Web components</li>
-                    <li>React js</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-20">
-            <div class="skill">
-                <img src="./imgs/icons/blender.png" alt="">
-                <ul>
-                    <li>Modellazione organica, poligonale, superficiale</li>
-                    <li>Character modeling, product modeling</li>
-                    <li>Shading procedurale</li>
-                    <li>Keyframes animation</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-20">
-            <div class="skill">
-                <img src="./imgs/icons/adobe.png" alt="">
-                <ul>
-                    <li>Padronanza principali software Adobe</li>
-                    <li>Padronanza Figma</li>
-                    <li>Comprensione dei fondamentali concetti di design, UI/UX</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-20">
-            <div class="skill">
-                <img src="./imgs/icons/altro.png" alt="">
-                <ul>
-                    <li>Inglese fluente</li>
-                    <li>Attitudine al team work</li>
-                    <li>Spiccato problem solving in ogni ambito</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="projects section">
-        <div class="title">
-            <h2 class="title-h2">PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI </h2>
-        </div>
-        <div class="card grid reversed" data-aos="fade-right" data-aos-offset="100">
-
-            <div class="col-50 des">
-                <h3>Oh My Gin (in corso)</h3>
-                <span class="chips">
-                    <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span>
-                <p>Applicazione <b>Next.js</b> per accedere a un vasto archivio di drink e le loro ricette, tramite <a href="https://www.thecocktaildb.com/api.php">API</a>. Ancora in corso, ma puoi dare un'occhiata al repository!</i></p>
-            </div>
-            <div class="col-50 img">
-                <a href="https://github.com/GwijaCodes/mydrink" target="_blank">
-                    <img src="./imgs/ohmygin.jpg" alt="" loading="lazy">
-                </a>
-            </div>
-        </div>
-        <div class="card grid" data-aos="fade-left" data-aos-offset="500">
-
-            <div class="col-50 img">
-                <a class="project" href="https://gwijacodes.github.io/myspazza/" target="_blank">
-                    <img src="./imgs/spazza-ad.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-50 des">
-                <h3>Spazza!</h3>
-                <span class="chips">
-                    <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE
-                        3D</span>
-                </span>
-                <p>Questa applicazione web nasce da una domanda che, se
-                    vivi in un comune dove
-                    viene ritirata la
-                    raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna
-                    uscire stasera?" <br>
-                    Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
-                    conferire in ogni singolo bidone.</p>
-            </div>
-        </div>
-        <div class="card grid reversed" data-aos="fade-right" data-aos-offset="500">
-
-            <div class="col-50 des">
-                <h3>Lucchesisucchi.it</h3>
-                <span class="chips">
-                    <span class="chip">FRONT-END</span>
-
-                </span>
-                <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di
-                    spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in
-                        Aci Catena.</i></p>
-            </div>
-            <div class="col-50 img">
-                <a href="https://www.lucchesisucchi.it/" target="_blank">
-                    <img src="./imgs/progetto-lucchesi.jpg" alt="" loading="lazy">
-                </a>
-            </div>
-        </div>
-        <div class="card grid" data-aos="fade-left" data-aos-offset="500">
-            <div class="col-50 img">
-                <a href="https://computermaniacireale.it/" target="_blank">
-                    <img src="./imgs/progetto-computermania.jpg" alt="" loading="lazy">
-                </a>
-            </div>
-            <div class="col-50 des">
-                <h3>Computermaniacireale.it</h3>
-                <span class="chips">
-                    <span class="chip">FRONT-END</span>
-
-                </span>
-                <p>Biglietto da visita elettronico ed essenziale per negozio di elettronica e riparazioni, one-page,
-                    animato.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="contacts section">
-        <img src="./imgs/skillset.svg" alt="" class="contacts-bg">
-        <div class="title">
-            <h2 class="title-h2">CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI </h2>
-        </div>
-        <div class="grid">
-            <div class="col-50">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <div class="contact-form">
-                        <input type="hidden" name="access_key" value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f">
-                        <input type="text" name="name" placeholder="Il tuo Nome" class="contact-inputs" required>
-                        <input type="email" name="email" placeholder="La tua Email" class="contact-inputs" required>
-                        <textarea name="message" placeholder="Il tuo Messaggio" class="contact-inputs"
-                            required></textarea>
-                        <button class="button" type="submit">INVIA</button>
-                </form>
-            </div>
-        </div>
-        <div class="col-50">
-            <img data-aos="fade-right" data-aos-delay="300" class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
-        </div>
-        <div class="final">
-            <div>
-                <a href="https://www.iubenda.com/privacy-policy/89294495" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-                <a href="https://www.iubenda.com/privacy-policy/89294495/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-            </div>
-            <div class="final-icons">
-                <a href="mailto:gloriasaija2000@gmail.com">
-                    <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/gloria-saija-a3816b217">
-                    <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
-                </a>
-                <a href="https://github.com/GwijaCodes">
-                    <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-                <a href="https://www.instagram.com/gwija.js/">
-                    <img src="./imgs/icons/instagram.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <script>
-        const loaderBar = document.querySelector('.loader-bar');
-        const loader = document.querySelector('.loader');
-        setTimeout(() => {
-            loaderBar.style.width = '30vw';
-            console.log('ready')
-        }, 50)
-        window.addEventListener('load', () => {
-            console.log('set')
-            loaderBar.style.width = '100vw'
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500)
-        })
-        
-        const bg = document.querySelector('.background');
-        const intro = document.querySelector('.intro');
-        
-        document.body.onpointermove = e => {
-            const {clientX, clientY} = e;
- 
-            bg.animate({
-                backgroundPositionX: `${-clientX/80}px`,
-                backgroundPositionY: `${-clientY/70}px`
-            },{duration: 1000, fill: "forwards"})
-            intro.animate({
-                transform: `translate(${-clientX/50}px, ${-clientY/40}px)`,
-            },{duration: 200, fill: "forwards"})
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        askConsentAtCookiePolicyUpdate: true,
+        floatingPreferencesButtonDisplay: "bottom-right",
+        perPurposeConsent: true,
+        siteId: 3679920,
+        whitelabel: false,
+        cookiePolicyId: 89294495,
+        lang: "it",
+        banner: {
+          acceptButtonDisplay: true,
+          closeButtonRejects: true,
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          listPurposes: true,
+          position: "float-top-center",
+          showTitle: false
         }
-
-function toggleOnXHover(target, triggerSelector = '.windows-header', shift = 60) {
-    const originalLeft = target.offsetLeft;
-    const originalTop = target.offsetTop;
-    let isShifted = false;
-
-    const trigger = target.querySelector(triggerSelector);
-
-    trigger.addEventListener('mouseenter', () => {
-    if (!isShifted) {
-      isShifted = true;
-      const direction = Math.random() < 0.5 ? -1 : 1;
-      const newLeft = originalLeft + direction * shift;
-      const newTop = originalTop + (direction * shift) / 10;
-
-      target.style.left = `${newLeft}px`;
-      target.style.top = `${newTop}px`;
-    } else {
-      target.style.left = `${originalLeft}px`;
-      target.style.top = `${originalTop}px`;
-      isShifted = false;
-
-      setTimeout(() => {
-        target.style.left = `${originalLeft}px`;
-        target.style.top = `${originalTop}px`;
-        isShifted = false;
-      }, 2000);
-      
-    }
-  });
-
-
-  }
-
-  const windowBox = document.getElementById('dodgyWindow');
-  toggleOnXHover(windowBox);
-      
-
+      };
     </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3679920.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Raleway:wght@100..900&display=swap"
+      fetchpriority="high"
+    />
+    <link rel="shortcut icon" href="/imgs/icons/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Ciao, sono Gloria Saija, Front End Developer e 3D Artist" />
+    <title>Gloria Saija | Front-end Dev</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-
-</body>
-
+  </body>
 </html>

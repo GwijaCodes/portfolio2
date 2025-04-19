@@ -1,4 +1,5 @@
-/* utilities */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 p,
 span {
     font-size: 2vmin;
@@ -49,10 +50,9 @@ a:hover {
 }
 
 .section {
-    margin: 12% 0;
     width: 100vw;
     min-height: 100vh;
-    position: relative;
+    background-color: #171717;
 }
 
 .col-20 {
@@ -89,24 +89,8 @@ a:hover {
   
 }
 
-.title {
-    border-top: 4px solid var(--chiaro);
-    border-bottom: 4px solid var(--chiaro);
-    width: 100vw;
-    height: min-content;
-    padding: 10px 0;
-    transform: rotate(-5deg) scale(1.1);
-}
-
-.title-h2 {
-    font-size: 64px;
-    white-space: nowrap;
-    color: var(--giallo);
-    animation: section-title 10s linear infinite;
-}
-
 .section-title-container{
-    margin: 5rem auto 10vh;
+    margin: 2vh auto;
     width: 80vw;
     padding: 0;
     color: #fff !important;
@@ -124,15 +108,6 @@ a:hover {
     font-weight: light;
 }
 
-@keyframes section-title {
-    0% {
-        transform: translateX(-50%)
-    }
-
-    100% {
-        transform: translateX(0%)
-    }
-}
 
 .chips {
     margin-top: 2%;
@@ -279,13 +254,6 @@ button:hover {
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-}
-
-:root {
-    --chiaro: #d9d9d9;
-    --blu: #0056C6;
-    --scurissimo: #151515;
-    --giallo: #E49600;
 }
 
 html {
@@ -465,28 +433,6 @@ header {
     filter: invert(1);
 }
 
-/* about me */
-.about-me {
-    color: var(--chiaro);
-}
-
-.about-me .grid {
-    margin: 1rem auto;
-    width: 80vw;
-    padding: 0;
-}
-
-.about-me .col-50 {
-    padding-top: 0;
-}
-
-.animated {
-    overflow: hidden;
-}
-
-.gif {
-    width: 100%;
-}
 
 /*SKILLSET*/
 
