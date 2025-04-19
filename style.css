@@ -1,7 +1,7 @@
 /* utilities */
 p,
 span {
-    font-size: 2vmin !important;
+    font-size: 2vmin;
 }
 
 .img-res {
@@ -49,6 +49,7 @@ a:hover {
 }
 
 .section {
+    margin: 12% 0;
     width: 100vw;
     min-height: 100vh;
     position: relative;
@@ -56,37 +57,36 @@ a:hover {
 
 .col-20 {
     width: 20%;
-    padding: 10% 20px;
+  
 }
 
 .col-25 {
     width: 25%;
-    padding: 10% 20px;
+  
 }
 
 .col-33 {
     width: 33%;
-    padding: 10% 20px;
+  
 }
 
 .col-40 {
     width: 40%;
-    padding: 10% 20px;
+  
 }
 
 .col-50 {
     width: 50%;
-    padding: 10% 20px;
 }
 
 .col-60 {
     width: 60%;
-    padding: 10% 20px;
+  
 }
 
 .col-100 {
     width: 100%;
-    padding: 10% 20px;
+  
 }
 
 .title {
@@ -94,7 +94,8 @@ a:hover {
     border-bottom: 4px solid var(--chiaro);
     width: 100vw;
     height: min-content;
-    padding: 10px 0
+    padding: 10px 0;
+    transform: rotate(-5deg) scale(1.1);
 }
 
 .title-h2 {
@@ -102,6 +103,25 @@ a:hover {
     white-space: nowrap;
     color: var(--giallo);
     animation: section-title 10s linear infinite;
+}
+
+.section-title-container{
+    margin: 5rem auto 10vh;
+    width: 80vw;
+    padding: 0;
+    color: #fff !important;
+}
+
+.section-title-container .section-title{
+    font-size: 36px;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+
+}
+.section-title-container .subtitle{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: light;
 }
 
 @keyframes section-title {
@@ -359,14 +379,14 @@ nav h3 {
 
 /*HEADER*/
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
     font-family: 'Raleway';
     font-weight: 900;
     color: var(--giallo);
-}
+} */
 
 h1 {
     font-size: 60px;
@@ -451,7 +471,7 @@ header {
 }
 
 .about-me .grid {
-    margin: 10% auto;
+    margin: 1rem auto;
     width: 80vw;
     padding: 0;
 }
@@ -599,3 +619,42 @@ header {
 .final-icons a:hover img{
     filter: saturate(0) brightness(.6);
 }
+
+.windows-container {
+    border: 2px solid var(--blu);
+    width: 300px;
+    background: var(--scurissimo);
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: top 0.1s ease, left 0.1s ease;
+  }
+
+  .windows-header {
+    background-color: var(--blu);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .windows-header .close-btn {
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 0.2rem;
+    color: var(--scurissimo);
+  }
+
+  .windows-content {
+    padding: 1rem;
+  }
+
+  .windows-content img {
+    width: 100%;
+    display: block;
+    border: 1px solid #ccc;
+  }

@@ -23,7 +23,8 @@
 </head>
 
 <body>
-
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
     <div class="background"></div>
     <div class="loader">
         <div class="loader-bar"></div>
@@ -91,21 +92,36 @@
         <div class="title">
             <h2 class="title-h2">ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME </h2>
         </div>
+        <div class="section-title-container">
+            <h2 class="section-title">DIMMI QUALCOSA CHE NON SO...</h2>
+            <p class="subtitle">Dato che  non hai skippato questa sezione, e’ arrivato il momento di parlarti un po’ di me.</p>
+        </div>
         <div class="grid">
             <div class="col-50">
-                <p>Ho 23 anni, vivo ad Acireale e ho studiato Arti Tecnologiche presso l’ <a
-                        href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte
-                    interesse verso le tecnologie del web e la grafica 3D (in particolare quella retrò!) mi hanno
-                    permesso di acquisire diverse skill fondamentali.
-                    Padroneggiare i software e i linguaggi necessari è infatti molto importante, ma ho imparato che
-                    altrettanto importanti sono la caparbietà tipica del problem solving, l'apertura per lavorare in
-                    gruppo e imparare nuovi metodi, e ultima ma non meno importante: saper usare Google. <br>
-                    Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
+                <p>Sono una developer con un background in Arti Tecnologiche, laureata all’<a
+                    href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Vivo ad Acireale e
+                lavoro nel mondo del web, dove unisco creatività e tecnica.
+                Ho sempre avuto un debole per la grafica 3D (soprattutto quella retrò!) e, da quando ho iniziato a
+                sviluppare, ho ampliato le mie competenze affrontando sfide sempre nuove.
+                Se c’è una cosa che ho capito, è che conoscere strumenti e linguaggi è fondamentale, ma lo è
+                altrettanto sapersi orientare tra ostacoli inaspettati, collaborare con gli altri e rimanere
+                curiosi. Ah, e naturalmente… saper cercare su Google! <br>
+                Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
+
                 <img data-aos="fade-left" src="./imgs/pic.png" alt="gs">
             </div>
             <div class="col-50">
-                <video data-aos="fade-up" class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
-                    poster="./imgs/poster.jpg"></video>
+                <div style="position: relative">
+                    <div class="windows-container" id="dodgyWindow">
+                        <div class="windows-header">
+                          <span class="close-btn">X</span>
+                        </div>
+                        <div class="windows-content">
+                          <video data-aos="fade-up" class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
+                              poster="./imgs/poster.jpg"></video>
+                        </div>
+                      </div>
+                </div>
             </div>
         </div>
     </div>
@@ -302,20 +318,13 @@
                 loader.style.display = 'none';
             }, 500)
         })
-
-        //background scroll parallax
-        // window.addEventListener('scroll', () => {
-        //     const distance = window.scrollY;
-        //     const bg = document.querySelector('.background').style.backgroundPositionY = `${distance / 1.5}px`;
-        
-        // })
         
         const bg = document.querySelector('.background');
         const intro = document.querySelector('.intro');
         
         document.body.onpointermove = e => {
             const {clientX, clientY} = e;
-
+ 
             bg.animate({
                 backgroundPositionX: `${-clientX/80}px`,
                 backgroundPositionY: `${-clientY/70}px`
@@ -324,6 +333,43 @@
                 transform: `translate(${-clientX/50}px, ${-clientY/40}px)`,
             },{duration: 200, fill: "forwards"})
         }
+
+function toggleOnXHover(target, triggerSelector = '.windows-header', shift = 60) {
+    const originalLeft = target.offsetLeft;
+    const originalTop = target.offsetTop;
+    let isShifted = false;
+
+    const trigger = target.querySelector(triggerSelector);
+
+    trigger.addEventListener('mouseenter', () => {
+    if (!isShifted) {
+      isShifted = true;
+      const direction = Math.random() < 0.5 ? -1 : 1;
+      const newLeft = originalLeft + direction * shift;
+      const newTop = originalTop + (direction * shift) / 10;
+
+      target.style.left = `${newLeft}px`;
+      target.style.top = `${newTop}px`;
+    } else {
+      target.style.left = `${originalLeft}px`;
+      target.style.top = `${originalTop}px`;
+      isShifted = false;
+
+      setTimeout(() => {
+        target.style.left = `${originalLeft}px`;
+        target.style.top = `${originalTop}px`;
+        isShifted = false;
+      }, 2000);
+      
+    }
+  });
+
+
+  }
+
+  const windowBox = document.getElementById('dodgyWindow');
+  toggleOnXHover(windowBox);
+      
 
     </script>
 
