@@ -609,12 +609,6 @@ header {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-/* Skills-section: vertical regulatory-style titles at left of cards */
-.skills-section .grid {
-    gap: 2.5rem;
-    align-items: stretch;
-}
-
 .skills-section .col-50 {
     /* force two columns: use flex-basis and max-width to override any cascade issues */
     flex: 0 0 calc(50% - 1rem);
@@ -626,44 +620,88 @@ header {
     background-color: var(--scurissimo);
     color: var(--chiaro);
     border: 2px solid #ffffff; /* white card border */
-    padding: 0; /* left padding to leave space visually */
+    padding: 2.25rem 1.5rem 1.5rem 0; /* remove left space so title sits flush */
     max-height: 200px;
     display: flex;
 }
 
+.skills-section .skill-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.skills-section .label-list {
+    margin: 0;
+    padding-left: 1rem;
+    flex: 1 1 auto;
+}
+
+.skill-icons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.skill-icons .ti {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+}
+
+@media (max-width: 768px) {
+    .skill-icons .ti {
+        font-size: 1rem;
+        padding: 6px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .skills-section .col-50 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
 .skills-section .label-title {
+    position: relative;
     writing-mode: vertical-rl;
     text-orientation: sideways-right;
-    background: #ffffff;
+    background: var(--giallo);
     color: black;
     text-align: center;
     transform: rotate(180deg);
     font-weight: 700;
     padding: 10px;
-    white-space: nowrap;
     height: calc(100% - 4px);
     border: 2px solid black;
-    margin-right: 4px;
+    margin-right: 0;
 }
 
-/* small visual gap between title box and card border by adding subtle outline */
-.skills-section .label-title::after{
-    content: '';
-    position: absolute;
-    inset: -4px; /* small margin around title box */
-    border-radius: 2px;
-    pointer-events: none;
-}
-
-/* Mobile: keep titles horizontal and placed above each card */
 @media (max-width: 768px) {
     .skills-section .skill-label {
-        padding-left: 1.5rem;
+        padding: 4px;
+        padding-bottom: 1.5rem;
         min-height: auto;
+        max-height: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
     }
 
     .skills-section .label-title {
         position: relative;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
         left: 0;
         top: 0;
         transform: none;
@@ -674,6 +712,7 @@ header {
         padding: 6px 10px;
         border: 1px solid #ffffff;
         box-shadow: none;
+        height: auto;
     }
 }
 
