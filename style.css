@@ -76,7 +76,7 @@ a:hover {
 
 .col-50 {
     width: 50%;
-    padding: 10% 20px;
+    padding: 20px;
 }
 
 .col-60 {
@@ -598,4 +598,102 @@ header {
 
 .final-icons a:hover img{
     filter: saturate(0) brightness(.6);
+}
+
+
+.skill-label {
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Skills-section: vertical regulatory-style titles at left of cards */
+.skills-section .grid {
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+.skills-section .col-50 {
+    /* force two columns: use flex-basis and max-width to override any cascade issues */
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    box-sizing: border-box;
+}
+
+.skills-section .skill-label {
+    background-color: var(--scurissimo);
+    color: var(--chiaro);
+    border: 2px solid #ffffff; /* white card border */
+    padding: 0; /* left padding to leave space visually */
+    max-height: 200px;
+    display: flex;
+}
+
+.skills-section .label-title {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    background: #ffffff;
+    color: black;
+    text-align: center;
+    transform: rotate(180deg);
+    font-weight: 700;
+    padding: 10px;
+    white-space: nowrap;
+    height: calc(100% - 4px);
+    border: 2px solid black;
+    margin-right: 4px;
+}
+
+/* small visual gap between title box and card border by adding subtle outline */
+.skills-section .label-title::after{
+    content: '';
+    position: absolute;
+    inset: -4px; /* small margin around title box */
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* Mobile: keep titles horizontal and placed above each card */
+@media (max-width: 768px) {
+    .skills-section .skill-label {
+        padding-left: 1.5rem;
+        min-height: auto;
+    }
+
+    .skills-section .label-title {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        display: inline-block;
+        margin: 0 0 0.75rem 0;
+        background: #ffffff;
+        color: #000000;
+        padding: 6px 10px;
+        border: 1px solid #ffffff;
+        box-shadow: none;
+    }
+}
+
+.label-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.label-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.label-list li {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.25rem 0;
+    white-space: nowrap;
 }
