@@ -399,7 +399,7 @@ La nav diventa una **top bar HUD a piena larghezza** — stile barra di stato si
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ ▶ GS.EXE    [01] ABOUT    [02] PROJECTS    [03] CONTACT  ▓▓▓ │
+│ ▶ GS.EXE    [01] ABOUT    [02] CONTACT  ▓▓▓ │
 └──────────────────────────────────────────────────────────────┘
 ```
 

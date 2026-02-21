@@ -617,67 +617,6 @@ p {
 }
 .build-cta p { font-size: 12px; letter-spacing: 1px; }
 
-/* ─── PROJECTS ───────────────────────────────────────────────── */
-.projects { background: var(--col-black); }
-
-.projects-intro {
-    max-width: var(--max-content);
-    margin: 0 auto var(--space-lg);
-}
-
-.project-card {
-    max-width: var(--max-content);
-    margin: 0 auto var(--grid-gutter);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--grid-gutter);
-    background: var(--col-dark);
-    border: 1px solid var(--col-mid);
-    padding-top: 28px;  /* room for data-label */
-}
-.project-card.reversed { direction: rtl; }
-.project-card.reversed > * { direction: ltr; }
-
-.project-desc {
-    padding: var(--space-xl) var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-    justify-content: center;
-}
-.project-desc h3 { font-size: 20px; letter-spacing: 3px; }
-.project-desc p { font-size: 13px; line-height: 22px; }
-
-.project-img {
-    position: relative;
-    overflow: hidden;
-    background: var(--col-panel);
-}
-.project-img a { display: block; width: 100%; height: 100%; }
-.project-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 300ms steps(6), box-shadow 300ms;
-    filter: grayscale(0.2) contrast(1.05);
-    box-shadow: inset 0 0 30px rgba(255,208,42,0.2);
-}
-.project-img:hover img { transform: scale(1.03); box-shadow: inset 0 0 30px rgba(1, 70, 219, 0.4); }
-
-.img-label {
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
-    font-family: var(--font-system);
-    font-size: 9px;
-    color: var(--col-yellow);
-    letter-spacing: 2px;
-    background: rgba(13,13,13,0.75);
-    padding: 2px 6px;
-    opacity: 0.8;
-}
-
 /* ─── CONTACTS ───────────────────────────────────────────────── */
 .contacts {
     background: var(--col-dark);

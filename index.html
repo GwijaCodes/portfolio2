@@ -103,9 +103,7 @@
         <ul>
           <li id="aboutme" data-index="01">ABOUT</li>
           <span class="nav-sep">│</span>
-          <li id="progetti" data-index="02">WORK</li>
-          <span class="nav-sep">│</span>
-          <li id="contatti" data-index="03">CONTACT</li>
+          <li id="contatti" data-index="02">CONTACT</li>
         </ul>
       </div>
       <span class="nav-status">▓▓▓ ONLINE</span>
@@ -122,13 +120,6 @@
         .addEventListener("click", () =>
           document
             .querySelector(".about-me")
-            .scrollIntoView({ behavior: "smooth" })
-        );
-      document
-        .querySelector("#progetti")
-        .addEventListener("click", () =>
-          document
-            .querySelector(".projects")
             .scrollIntoView({ behavior: "smooth" })
         );
       document
@@ -288,7 +279,7 @@
               BUILD &nbsp;/&nbsp; WHAT I BUILD &nbsp;/&nbsp; WHAT I BUILD
               &nbsp;/&nbsp;
             </span>
-                    <span
+            <span
               >WHAT I BUILD &nbsp;/&nbsp; WHAT I BUILD &nbsp;/&nbsp; WHAT I
               BUILD &nbsp;/&nbsp; WHAT I BUILD &nbsp;/&nbsp; WHAT I BUILD
               &nbsp;/&nbsp;
@@ -366,16 +357,23 @@
           </div>
         </div>
         <div class="build-cta" data-aos="fade-up">
-          <span class="sys-label">[OUTPUT.LINKS]</span>
+          <span class="sys-label">[OUTPUT.CONTRIBUTIONS & PROJECTS]</span>
           <p>
-            Curious about experiments and code?
+            Explore code and contributions on
             <a
               href="https://github.com/GwijaCodes"
               target="_blank"
               class="inline-link"
               >GitHub</a
             >
-            — Let's connect on
+            —
+            <a
+              href="https://gitlab.com/GwijaCodes"
+              target="_blank"
+              class="inline-link"
+              >GitLab</a
+            >
+            — or let's connect on
             <a
               href="https://www.linkedin.com/in/gloria-saija-a3816b217"
               target="_blank"
@@ -383,158 +381,6 @@
               >LinkedIn</a
             >
           </p>
-        </div>
-      </section>
-
-      <!-- ═══ PROJECTS -->
-      <section class="projects section">
-        <div class="section-title-bar">
-          <div class="marquee-track">
-            <span
-              >PROGETTI RECENTI &nbsp;/&nbsp; PROGETTI RECENTI &nbsp;/&nbsp;
-              PROGETTI RECENTI &nbsp;/&nbsp; PROGETTI RECENTI &nbsp;/&nbsp;
-            </span>
-          </div>
-        </div>
-        <div class="projects-intro" data-aos="fade-up">
-          <span class="sys-label">[SYS.03 — WORK]</span>
-        </div>
-
-        <div
-          class="project-card panel corner-cut-md reversed"
-          data-label="[PRJ-001]"
-          data-aos="fade-right"
-          data-aos-offset="100"
-        >
-          <div class="project-desc">
-            <span class="sys-label">[STATUS: WIP]</span>
-            <h3>Oh My Gin</h3>
-            <div class="chips">
-              <span class="chip">UI/UX</span><span class="chip">FRONT-END</span>
-            </div>
-            <p>
-              Applicazione <strong>Next.js</strong> per accedere a un vasto
-              archivio di drink e ricette tramite
-              <a
-                href="https://www.thecocktaildb.com/api.php"
-                class="inline-link"
-                >API</a
-              >. Ancora in corso, ma puoi dare un'occhiata al repository!
-            </p>
-            <a
-              href="https://github.com/GwijaCodes/mydrink"
-              target="_blank"
-              class="btn corner-cut-sm"
-              >VIEW REPO <i class="ti ti-arrow-right"></i
-            ></a>
-          </div>
-          <div class="project-img">
-            <a href="https://github.com/GwijaCodes/mydrink" target="_blank">
-              <img src="./imgs/ohmygin.jpg" alt="Oh My Gin" loading="lazy" />
-              <span class="img-label">[PRJ-001 / OH.MY.GIN]</span>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="project-card panel corner-cut-md"
-          data-label="[PRJ-002]"
-          data-aos="fade-left"
-          data-aos-offset="200"
-        >
-          <div class="project-img">
-            <a href="https://gwijacodes.github.io/myspazza/" target="_blank">
-              <img src="./imgs/spazza-ad.jpg" alt="Spazza" />
-              <span class="img-label">[PRJ-002 / SPAZZA]</span>
-            </a>
-          </div>
-          <div class="project-desc">
-            <span class="sys-label">[STATUS: LIVE]</span>
-            <h3>Spazza!</h3>
-            <div class="chips">
-              <span class="chip">UI/UX</span><span class="chip">FRONT-END</span
-              ><span class="chip">3D</span>
-            </div>
-            <p>
-              Quale bidone bisogna uscire stasera? Spazza te lo ricorderà ogni
-              giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
-              conferire in ogni singolo bidone.
-            </p>
-            <a
-              href="https://gwijacodes.github.io/myspazza/"
-              target="_blank"
-              class="btn corner-cut-sm"
-              >VAI AL PROGETTO <i class="ti ti-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-
-        <div
-          class="project-card panel corner-cut-md reversed"
-          data-label="[PRJ-003]"
-          data-aos="fade-right"
-          data-aos-offset="200"
-        >
-          <div class="project-desc">
-            <span class="sys-label">[STATUS: LIVE]</span>
-            <h3>Lucchesisucchi.it</h3>
-            <div class="chips"><span class="chip">FRONT-END</span></div>
-            <p>
-              Sito vetrina one-page che racconta la storia e i prodotti
-              dell'azienda Lucchesi, produttrice di spremute surgelate e olii
-              essenziali estratti da agrumi
-              <em>made in Sicily, based in Aci Catena.</em>
-            </p>
-            <a
-              href="https://www.lucchesisucchi.it/"
-              target="_blank"
-              class="btn corner-cut-sm"
-              >VAI AL SITO <i class="ti ti-arrow-right"></i
-            ></a>
-          </div>
-          <div class="project-img">
-            <a href="https://www.lucchesisucchi.it/" target="_blank">
-              <img
-                src="./imgs/progetto-lucchesi.jpg"
-                alt="Lucchesi Succhi"
-                loading="lazy"
-              />
-              <span class="img-label">[PRJ-003 / LUCCHESI]</span>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="project-card panel corner-cut-md"
-          data-label="[PRJ-004]"
-          data-aos="fade-left"
-          data-aos-offset="200"
-        >
-          <div class="project-img">
-            <a href="https://computermaniacireale.it/" target="_blank">
-              <img
-                src="./imgs/progetto-computermania.jpg"
-                alt="Computer Mania Acireale"
-                loading="lazy"
-              />
-              <span class="img-label">[PRJ-004 / COMPUTERMANIA]</span>
-            </a>
-          </div>
-          <div class="project-desc">
-            <span class="sys-label">[STATUS: LIVE]</span>
-            <h3>Computermaniacireale.it</h3>
-            <div class="chips"><span class="chip">FRONT-END</span></div>
-            <p>
-              Biglietto da visita elettronico ed essenziale per negozio di
-              elettronica e riparazioni, one-page, animato.
-            </p>
-            <a
-              href="https://computermaniacireale.it/"
-              target="_blank"
-              class="btn corner-cut-sm"
-              >VAI AL SITO <i class="ti ti-arrow-right"></i
-            ></a>
-          </div>
         </div>
       </section>
     </main>
