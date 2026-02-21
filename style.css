@@ -18,6 +18,7 @@
     --col-white:    #f0f0f0;
     --col-yellow:   #ffd02a;
     --col-orange:   #ff6b1a;
+    --col-blue:   #0146db;
     --col-red:      #cc2200;
     --col-green:    #39ff6e;
     --col-scan:     rgba(255, 208, 42, 0.03);
@@ -164,7 +165,7 @@ p {
     border-bottom: 1px solid rgba(255,208,42,0.3);
     transition: none;
 }
-.inline-link:hover { border-bottom-color: var(--col-yellow); }
+.inline-link:hover { color: var(--col-blue); border-bottom-color: var(--col-blue); filter: drop-shadow(0 0 15px rgba(1, 70, 219, 0.5)); }
 
 .scanlines::after {
     content: '';
@@ -226,12 +227,12 @@ p {
     transition: none;
     clip-path: polygon(8px 0%,100% 0%,100% calc(100% - 8px),calc(100% - 8px) 100%,0% 100%,0% 8px);
 }
-.btn:hover { background: var(--col-yellow); color: var(--col-black); }
-.btn:active { transform: translateY(2px); background: var(--col-orange); color: var(--col-black); border-color: var(--col-orange); }
+.btn:hover { background: var(--col-blue); color: var(--col-white); box-shadow: 0 0 20px rgba(1, 70, 219, 0.6); border-color: var(--col-blue); }
+.btn:active { transform: translateY(2px); background: var(--col-blue); color: var(--col-white); border-color: var(--col-blue); box-shadow: 0 0 30px rgba(1, 70, 219, 0.8); }
 .btn .ti { font-size: 13px; }
 
 .btn-ghost { border-color: var(--col-mid); color: var(--col-light); }
-.btn-ghost:hover { border-color: var(--col-yellow); color: var(--col-yellow); background: transparent; }
+.btn-ghost:hover { border-color: var(--col-blue); color: var(--col-blue); background: transparent; box-shadow: inset 0 0 20px rgba(1, 70, 219, 0.3), 0 0 20px rgba(1, 70, 219, 0.5); }
 
 /* chips */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: var(--space-sm) 0; }
@@ -249,13 +250,14 @@ p {
 /* icons */
 .icons { display: flex; align-items: center; gap: 16px; }
 .icons img {
-    filter: brightness(0) invert(1) opacity(0.55);
-    transition: transform 80ms, filter 80ms;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(150%) hue-rotate(42deg) brightness(1);
+    transition: transform 80ms, filter 80ms, box-shadow 80ms;
 }
 .icons img:hover {
     transform: translateY(-4px);
-    filter: brightness(0) saturate(100%) invert(83%) sepia(52%) saturate(800%) hue-rotate(0deg) brightness(1.1);
+    filter: brightness(0) saturate(100%) invert(14%) sepia(100%) saturate(150%) hue-rotate(206deg) brightness(1.05);
     cursor: pointer;
+    box-shadow: 0 0 15px rgba(1, 70, 219, 0.6);
 }
 
 /* ─── LOADER ─────────────────────────────────────────────────── */
@@ -442,7 +444,7 @@ p {
     font-size: 9px;
     opacity: 0.6;
 }
-.navigation li:hover { color: var(--col-yellow); }
+.navigation li:hover { color: var(--col-blue); filter: drop-shadow(0 0 15px rgba(1, 70, 219, 0.6)); }
 
 .nav-status {
     font-family: var(--font-system);
@@ -512,6 +514,7 @@ p {
     object-fit: contain;
     mix-blend-mode: lighten;
     opacity: 0.85;
+    filter: invert(0.2) saturate(1.5) hue-rotate(220deg) brightness(1.2);
 }
 
 /* ─── ABOUT ──────────────────────────────────────────────────── */
@@ -586,13 +589,13 @@ p {
 .build-card {
     padding: var(--space-xl) var(--space-lg) var(--space-lg);
     background: var(--col-panel);
-    border: 1px solid var(--col-mid);
+    border: 1px solid var(--col-yellow);
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-    transition: border-color 80ms;
+    transition: border-color 80ms, box-shadow 80ms;
 }
-.build-card:hover { border-color: rgba(255,208,42,0.4); }
+.build-card:hover { border-color: var(--col-blue); box-shadow: 0 0 20px rgba(1, 70, 219, 0.4); }
 
 .build-header {
     display: flex;
@@ -656,10 +659,11 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 300ms steps(6);
+    transition: transform 300ms steps(6), box-shadow 300ms;
     filter: grayscale(0.2) contrast(1.05);
+    box-shadow: inset 0 0 30px rgba(255,208,42,0.2);
 }
-.project-img:hover img { transform: scale(1.03); }
+.project-img:hover img { transform: scale(1.03); box-shadow: inset 0 0 30px rgba(1, 70, 219, 0.4); }
 
 .img-label {
     position: absolute;
@@ -789,10 +793,11 @@ p {
 }
 .footer-legal a:hover { opacity: 1; color: var(--col-yellow); }
 .footer-icons { gap: 12px; }
-.footer-icons img { filter: brightness(0) invert(1) opacity(0.35); transition: none; }
+.footer-icons img { filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(150%) hue-rotate(42deg) brightness(1) opacity(0.7); transition: none, box-shadow 80ms; }
 .footer-icons img:hover {
-    filter: brightness(0) saturate(100%) invert(83%) sepia(52%) saturate(800%) hue-rotate(0deg);
+    filter: brightness(0) saturate(100%) invert(14%) sepia(100%) saturate(150%) hue-rotate(206deg);
     transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(1, 70, 219, 0.6);
 }
 .footer-sig {
     width: 100%;

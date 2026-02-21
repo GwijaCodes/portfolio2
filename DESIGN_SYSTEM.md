@@ -199,18 +199,21 @@ Il linguaggio dei bordi è il più identitario del sistema.
   transition: none; /* NO smooth — meccanico */
 }
 
-/* HOVER — click istantaneo */
+/* HOVER — blue glow interaction */
 .btn:hover {
-  background: var(--col-yellow);
-  color: var(--col-black);
+  background: var(--col-blue);
+  color: var(--col-white);
+  box-shadow: 0 0 20px rgba(1, 70, 219, 0.6);
+  border-color: var(--col-blue);
 }
 
 /* ACTIVE — feedback fisico immediato */
 .btn:active {
   transform: translateY(2px);
-  background: var(--col-orange);
-  color: var(--col-black);
-  border-color: var(--col-orange);
+  background: var(--col-blue);
+  color: var(--col-white);
+  border-color: var(--col-blue);
+  box-shadow: 0 0 30px rgba(1, 70, 219, 0.8);
 }
 
 /* VARIANTE GHOST */
@@ -236,8 +239,8 @@ Il linguaggio dei bordi è il più identitario del sistema.
 | Stato | Comportamento |
 |----------|------------------------------------------|
 | Default | Bordo giallo, bg trasparente |
-| Hover | Fill giallo istantaneo (no transition) |
-| Active | Shift Y +2px, fill arancione |
+| Hover | Fill blu con glow istantaneo (no transition) |
+| Active | Shift Y +2px, fill blu intenso, glow massimo |
 | Disabled | Bordo grigio, opacity 0.3, no cursor |
 | Loading | Label sostituita da `[PROCESSING...]` |
 
@@ -404,8 +407,8 @@ La nav diventa una **top bar HUD a piena larghezza** — stile barra di stato si
 
 - Altezza fissa: `40px` — compatta, non invadente
 - Sticky sempre: non scompare mai, niente blur morbido — `background: var(--col-black)` pieno
-- I link nav hanno prefisso numerato: `[01]`, `[02]`, `[03]`
-- Hover: il testo diventa `--col-yellow`, nessuna transizione — cambio istantaneo
+- I link nav hanno prefisso numerato: `[01]`, `[02]`, `[03]` in giallo di default
+- Hover: il numero diventa `--col-blue` con glow, testo passa a blue — cambio istantaneo
 - Un indicatore `▓▓▓` a destra (testo ASCII) per decoration HUD
 - Separatori verticali `│` tra le voci
 
@@ -431,6 +434,25 @@ La nav diventa una **top bar HUD a piena larghezza** — stile barra di stato si
 - Gli unici `ease` permessi: opacità di elementi che appaiono dallo scroll (testo body)
 - Nessun `transform: scale()` su hover elementi principali — spostamento Y o X sì, scala no
 - Le flip cards usano `steps(3)` — tre frame visibili, come un refresh di schermo
+
+---
+
+## 09b / STRATEGIA COLORI ELEMENTI INTERATTIVI
+
+**Principio:** Tutti gli elementi interattivi hanno una **gerarchia di colore a due stadi**:
+
+1. **Stato di default:** Giallo (`--col-yellow`) — indica interattività potenziale
+2. **Stato di interazione (hover/active):** Blu (`--col-blue`) con glow — feedback istantaneo di engagement
+
+**Elementi coinvolti:**
+- Bottoni (`.btn`) — bordo giallo → hover blu con glow
+- Link inline (`.inline-link`) — testo giallo → hover blu con glow
+- Icone (`.icons img`, `.footer-icons img`) — filtro giallo → hover blu con glow
+- Card del progetto (`.build-card`) — bordo giallo → hover blu con glow
+- Immagini progetto (`.project-img`) — ombra gialla → hover ombra blu
+- Indici navigazione (`.navigation li::before`) — testo giallo → hover blu con glow
+
+**Regola:** Il giallo è il colore di "richiamo", il blu è il colore di "risposta". Questa polarità crea tensione visiva e feedback immediato.
 
 ---
 
