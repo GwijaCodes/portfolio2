@@ -1,363 +1,741 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="it">
+  <head>
+    <!-- IUBENDA -->
     <script type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"floatingPreferencesButtonDisplay":"bottom-right","perPurposeConsent":true,"siteId":3679920,"whitelabel":false,"cookiePolicyId":89294495,"lang":"it", "banner":{ "acceptButtonDisplay":true,"closeButtonRejects":true,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","showTitle":false }};
-        </script>
-        <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3679920.js"></script>
-        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        askConsentAtCookiePolicyUpdate: true,
+        floatingPreferencesButtonDisplay: "bottom-right",
+        perPurposeConsent: true,
+        siteId: 3679920,
+        whitelabel: false,
+        cookiePolicyId: 89294495,
+        lang: "it",
+        banner: {
+          acceptButtonDisplay: true,
+          closeButtonRejects: true,
+          customizeButtonDisplay: true,
+          explicitWithdrawal: true,
+          listPurposes: true,
+          position: "float-top-center",
+          showTitle: false,
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cs.iubenda.com/autoblocking/3679920.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.iubenda.com/cs/iubenda_cs.js"
+      charset="UTF-8"
+      async
+    ></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css" integrity="sha512-gzw5zNP2TRq+DKyAqZfDclaTG4dOrGJrwob2Fc8xwcJPDPVij0HowLIMZ8c1NefFM0OZZYUUUNoPfcoI5jqudw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./imgs/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Ciao, sono Gloria Saija, Front End Developer e 3D Artist">
-    <title>Gloria Saija | Front-end Dev</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gloria Saija — Front-End Developer e 3D Artist. Portfolio."
+    />
 
-<body>
-
-    <div class="background"></div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=IBM+Plex+Mono:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="./imgs/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gloria Saija | GS.EXE</title>
+  </head>
+  <body>
+    <!-- ═══ LOADER -->
     <div class="loader">
+      <div class="loader-header">
+        <span class="loader-id">GS.EXE</span>
+        <span class="loader-status">[BOOT SEQUENCE]</span>
+      </div>
+      <div class="loader-track">
         <div class="loader-bar"></div>
-        <div class="loader-cube"></div>
+      </div>
+      <div class="loader-readout">
+        <span class="loader-pct">0%</span>
+        <span class="loader-msg">INITIALIZING SYSTEMS...</span>
+      </div>
+      <div class="loader-cube">
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+        <div class="cube-face"></div>
+      </div>
     </div>
 
-    <nav>
-        <h3>
-            <a href="#"><img style="width: 22px;" src="./imgs/icons/nav-ico.png" alt=""></a>
-        </h3>
-        <div class="navigation">
-            <ul>
-                <li id="aboutme">About me</li>
-                <li id="progetti">Progetti</li>
-                <li id="contatti">Contatti</li>
-            </ul>
-        </div>
+    <!-- ═══ BG PARALLAX -->
+    <div class="background"></div>
+
+    <!-- ═══ NAV HUD -->
+    <nav class="hud-bar">
+      <span class="nav-id">
+        <a href="#"
+          ><img
+            src="./imgs/icons/nav-ico.png"
+            alt="GS"
+            style="width: 14px; opacity: 0.7"
+          />
+          GS.EXE</a
+        >
+      </span>
+      <span class="nav-sep">│</span>
+      <div class="navigation">
+        <ul>
+          <li id="aboutme" data-index="01">ABOUT</li>
+          <span class="nav-sep">│</span>
+          <li id="progetti" data-index="02">WORK</li>
+          <span class="nav-sep">│</span>
+          <li id="contatti" data-index="03">CONTACT</li>
+        </ul>
+      </div>
+      <span class="nav-status">▓▓▓ ONLINE</span>
     </nav>
+
     <script>
-
-        //salta navigazione
-        const aboutmeScroll = document.querySelector('#aboutme');
-        aboutmeScroll.addEventListener('click', function () {
-            document.querySelector('.about-me').scrollIntoView({
-                scrollPaddingTop: '10vh'
-            });
-        })
-
-        const progettiScroll = document.querySelector('#progetti');
-        progettiScroll.addEventListener('click', function () {
-            document.querySelector('.projects').scrollIntoView(true);
-        })
-
-        const contattiScroll = document.querySelector('#contatti');
-        contattiScroll.addEventListener('click', function () {
-            document.querySelector('.contacts').scrollIntoView(true);
-        })
+      window.addEventListener("scroll", () =>
+        document
+          .querySelector("nav")
+          .classList.toggle("scrolled", window.scrollY > 0)
+      );
+      document
+        .querySelector("#aboutme")
+        .addEventListener("click", () =>
+          document
+            .querySelector(".about-me")
+            .scrollIntoView({ behavior: "smooth" })
+        );
+      document
+        .querySelector("#progetti")
+        .addEventListener("click", () =>
+          document
+            .querySelector(".projects")
+            .scrollIntoView({ behavior: "smooth" })
+        );
+      document
+        .querySelector("#contatti")
+        .addEventListener("click", () =>
+          document
+            .querySelector(".contacts")
+            .scrollIntoView({ behavior: "smooth" })
+        );
     </script>
 
-    <header class="grid">
-        <div class="intro">
-            <p>Come va? Mi chiamo Gloria Saija</p>
-            <h1>FRONT-END DEV & <br>
-                3D ARTIST</h1>
-            <div class="icons">
-                <a href="mailto:gloriasaija2000@gmail.com">
-                    <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/gloria-saija-a3816b217">
-                    <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
-                </a>
-                <a href="https://github.com/GwijaCodes">
-                    <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-                <a href="https://www.instagram.com/gwija.js/">
-                    <img src="./imgs/icons/instagram.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-            </div>
-            <video class="img-res rotating-head" src="./imgs/rotatehead.webm" autoplay loop playsinline muted></video>
+    <!-- ═══ HERO -->
+    <header class="intro scanlines">
+      <div class="hero-content">
+        <span class="sys-label">[SYS.INIT] — PORTFOLIO v2.0</span>
+        <p class="greet-sub">Come va? Mi chiamo Gloria Saija</p>
+        <h1 class="cursor-blink">FRONT-END DEV &<br />3D ARTIST</h1>
+        <div class="hero-meta">
+          <span>[LOC: ACIREALE.IT]</span>
+          <span>[ROLE: FRONT-END + 3D]</span>
+          <span>[STATUS: AVAILABLE]</span>
         </div>
+        <div class="icons">
+          <a href="mailto:gloriasaija2000@gmail.com" aria-label="Email">
+            <img src="./imgs/icons/email.svg" style="width: 46px" alt="Email" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gloria-saija-a3816b217"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="./imgs/icons/linkedin.svg"
+              style="width: 36px"
+              alt="LinkedIn"
+            />
+          </a>
+          <a href="https://github.com/GwijaCodes" aria-label="GitHub">
+            <img
+              src="./imgs/icons/github.svg"
+              style="width: 36px"
+              alt="GitHub"
+            />
+          </a>
+          <a href="https://www.instagram.com/gwija.js/" aria-label="Instagram">
+            <img
+              src="./imgs/icons/instagram.svg"
+              style="width: 36px"
+              alt="Instagram"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="hero-video-wrap">
+        <video
+          class="rotating-head"
+          src="./imgs/rotatehead.webm"
+          autoplay
+          loop
+          playsinline
+          muted
+        ></video>
+      </div>
     </header>
-    </div>
 
-    <div class="about-me section">
-        <div class="title">
-            <h2 class="title-h2">ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME ABOUT ME </h2>
+    <main>
+      <!-- ═══ ABOUT ME -->
+      <section class="about-me section">
+        <div class="section-title-bar">
+          <div class="marquee-track">
+            <span
+              >ABOUT ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT ME
+              &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT
+              ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp;
+            </span>
+          </div>
         </div>
-        <div class="grid">
-            <div class="col-50">
-                <p>Vengo dal 2000, vivo ad Acireale e ho studiato <strong>Arti Tecnologiche</strong> presso l' <a
-                        href="https://www.abacatania.it/">Accademia di Belle Arti di Catania</a>. Lo studio e il forte
-                    interesse verso le <strong>tecnologie del web e la grafica 3D</strong> (in particolare quella retrò!) 
-                    mi hanno
-                    permesso di acquisire diverse <strong>skill fondamentali</strong>.</p>
-
-                <p>Dall'autunno del 2024 <strong><a href="https://www.linkedin.com/company/tuurbo-ai/posts" target="_blank" rel="noopener noreferrer">lavoro in startup</a></strong>, dove la passione per il prodotto e l'abilità di evolvermi e crescere trovano sfogo ogni giorno.</p>
-
-                <p>Padroneggiare framework e design systems è infatti molto importante, ma ho imparato che altrettanto 
-                    importanti sono la <strong>caparbietà tipica del problem solving</strong>, fare del lavoro di gruppo una vera e propria forza
-                    , scoprire sempre metodi nuovi, e ultima ma non meno importante: <strong>saper usare Google</strong>. <br>
-                    Non ci credi? <a href="./imgs/SaijaGloria_CV.pdf">Scarica il mio curriculum</a></p>
-                <img data-aos="fade-left" src="./imgs/pic.png" alt="gs">
-            </div>
-            <div class="col-50">
-                <video data-aos="fade-up" class="gif" src="./imgs/dancedance.webm" autoplay loop playsinline muted
-                    poster="./imgs/poster.jpg"></video>
-            </div>
-        </div>
-    </div>
-    </div>
-
-<section class="what-i-build section">
-    <div class="title">
-        <h2 class="title-h2">
-            WHAT I BUILD WHAT I BUILD WHAT I BUILD WHAT I BUILD
-        </h2>
-    </div>
-
-    <div class="grid intro-block">
-        <div class="col-50">
-            <p class="section-intro">
-                I build production-ready frontend systems in fast-moving environments.
-                My focus is clarity, scalability and shipping real value — not just interfaces.
+        <div class="about-grid">
+          <div
+            class="about-text panel corner-cut-md"
+            data-label="[SYS.01 — BIO]"
+            data-aos="fade-right"
+          >
+            <span class="sys-label">[SYS.01]</span>
+            <h2>ABOUT ME</h2>
+            <p>
+              Vengo dal 2000, vivo ad Acireale e ho studiato
+              <strong>Arti Tecnologiche</strong> presso l'<a
+                href="https://www.abacatania.it/"
+                class="inline-link"
+                >Accademia di Belle Arti di Catania</a
+              >. Lo studio e il forte interesse verso le
+              <strong>tecnologie del web e la grafica 3D</strong> (in
+              particolare quella retrò!) mi hanno permesso di acquisire diverse
+              <strong>skill fondamentali</strong>.
             </p>
+            <p>
+              Dall'autunno del 2024
+              <strong
+                ><a
+                  href="https://www.linkedin.com/company/tuurbo-ai/posts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-link"
+                  >lavoro in startup</a
+                ></strong
+              >, dove la passione per il prodotto e l'abilità di evolvermi
+              trovano sfogo ogni giorno.
+            </p>
+            <p>
+              Padroneggiare framework e design systems è molto importante, ma ho
+              imparato che altrettanto importanti sono la
+              <strong>caparbietà tipica del problem solving</strong>, fare del
+              lavoro di gruppo una vera forza, e ultima ma non meno importante:
+              <strong>saper usare Google</strong>.<br />
+              Non ci credi?
+              <a href="./imgs/SaijaGloria_CV.pdf" class="inline-link"
+                >Scarica il mio curriculum</a
+              >
+            </p>
+            <img
+              data-aos="fade-left"
+              src="./imgs/pic.png"
+              alt="Gloria Saija"
+              class="about-pic"
+            />
+          </div>
+          <div
+            class="about-video-wrap panel corner-cut-sm border-accent-left"
+            data-label="[ASSET.VID]"
+            data-aos="fade-up"
+          >
+            <video
+              class="about-video"
+              src="./imgs/dancedance.webm"
+              autoplay
+              loop
+              playsinline
+              muted
+              poster="./imgs/poster.jpg"
+            ></video>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <div class="grid build-grid">
-
-    <div class="col-50 build-card">
-    <div class="build-header">
-        <i class="ti ti-chart-bar"></i>
-        <h3>Data-Driven Interfaces</h3>
-    </div>
-    <p>
-        Designing dashboards and reporting tools that turn complex data
-        into clear, actionable experiences — always performance-conscious.
-    </p>
-</div>
-
-<div class="col-50 build-card">
-    <div class="build-header">
-        <i class="ti ti-components"></i>
-        <h3>Component-Based Systems</h3>
-    </div>
-    <p>
-        Building modular UI architectures using design systems and reusable
-        patterns that stay maintainable over time.
-    </p>
-</div>
-
-<div class="col-50 build-card">
-    <div class="build-header">
-        <i class="ti ti-rocket"></i>
-        <h3>Startup Iteration</h3>
-    </div>
-    <p>
-        Shipping features fast, refining continuously, and collaborating
-        closely with product teams to move ideas into production.
-    </p>
-</div>
-
-<div class="col-50 build-card">
-    <div class="build-header">
-        <i class="ti ti-sparkles"></i>
-        <h3>Modern & AI-Assisted Workflows</h3>
-    </div>
-    <p>
-        Leveraging AI and modern tooling to prototype faster, reduce friction,
-        and improve development efficiency.
-    </p>
-</div>
-
-    </div>
-
-    <div class="build-cta">
-        <p>
+      <!-- ═══ WHAT I BUILD -->
+      <section class="what-i-build section">
+        <div class="section-title-bar">
+          <div class="marquee-track">
+            <span
+              >WHAT I BUILD &nbsp;/&nbsp; WHAT I BUILD &nbsp;/&nbsp; WHAT I
+              BUILD &nbsp;/&nbsp; WHAT I BUILD &nbsp;/&nbsp; WHAT I BUILD
+              &nbsp;/&nbsp;
+            </span>
+          </div>
+        </div>
+        <div class="build-intro" data-aos="fade-up">
+          <span class="sys-label">[SYS.02 — CAPABILITIES]</span>
+          <p class="section-intro">
+            I build production-ready frontend systems in fast-moving
+            environments. My focus is clarity, scalability and shipping real
+            value — not just interfaces.
+          </p>
+        </div>
+        <div class="build-grid">
+          <div
+            class="build-card panel corner-cut-md"
+            data-label="[CAP-001]"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="build-header">
+              <i class="ti ti-chart-bar"></i>
+              <h3>Data-Driven Interfaces</h3>
+            </div>
+            <p>
+              Designing dashboards and reporting tools that turn complex data
+              into clear, actionable experiences — always performance-conscious.
+            </p>
+          </div>
+          <div
+            class="build-card panel corner-cut-md"
+            data-label="[CAP-002]"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            <div class="build-header">
+              <i class="ti ti-components"></i>
+              <h3>Component-Based Systems</h3>
+            </div>
+            <p>
+              Building modular UI architectures using design systems and
+              reusable patterns that stay maintainable over time.
+            </p>
+          </div>
+          <div
+            class="build-card panel corner-cut-md"
+            data-label="[CAP-003]"
+            data-aos="fade-up"
+            data-aos-delay="160"
+          >
+            <div class="build-header">
+              <i class="ti ti-rocket"></i>
+              <h3>Startup Iteration</h3>
+            </div>
+            <p>
+              Shipping features fast, refining continuously, and collaborating
+              closely with product teams to move ideas into production.
+            </p>
+          </div>
+          <div
+            class="build-card panel corner-cut-md"
+            data-label="[CAP-004]"
+            data-aos="fade-up"
+            data-aos-delay="240"
+          >
+            <div class="build-header">
+              <i class="ti ti-sparkles"></i>
+              <h3>Modern & AI-Assisted Workflows</h3>
+            </div>
+            <p>
+              Leveraging AI and modern tooling to prototype faster, reduce
+              friction, and improve development efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="build-cta" data-aos="fade-up">
+          <span class="sys-label">[OUTPUT.LINKS]</span>
+          <p>
             Curious about experiments and code?
-            <a href="https://github.com/GwijaCodes" target="_blank">GitHub</a>
-            —
-            Let’s connect on
-            <a href="https://www.linkedin.com/in/gloria-saija-a3816b217" target="_blank">LinkedIn</a>
-        </p>
-    </div>
-</section>
-
-
-
-    <div style="display: none" class="projects section">
-        <div class="title">
-            <h2 class="title-h2">PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI PROGETTI RECENTI </h2>
+            <a
+              href="https://github.com/GwijaCodes"
+              target="_blank"
+              class="inline-link"
+              >GitHub</a
+            >
+            — Let's connect on
+            <a
+              href="https://www.linkedin.com/in/gloria-saija-a3816b217"
+              target="_blank"
+              class="inline-link"
+              >LinkedIn</a
+            >
+          </p>
         </div>
-        <div class="card grid reversed" data-aos="fade-right" data-aos-offset="100">
+      </section>
 
-            <div class="col-50 des">
-                <h3>Oh My Gin (in corso)</h3>
-                <span class="chips">
-                    <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span>
-                <p>Applicazione <b>Next.js</b> per accedere a un vasto archivio di drink e le loro ricette, tramite <a href="https://www.thecocktaildb.com/api.php">API</a>. Ancora in corso, ma puoi dare un'occhiata al repository!</i></p>
-            </div>
-            <div class="col-50 img">
-                <a href="https://github.com/GwijaCodes/mydrink" target="_blank">
-                    <img src="./imgs/ohmygin.jpg" alt="" loading="lazy">
-                </a>
-            </div>
+      <!-- ═══ PROJECTS -->
+      <section class="projects section">
+        <div class="section-title-bar">
+          <div class="marquee-track">
+            <span
+              >PROGETTI RECENTI &nbsp;/&nbsp; PROGETTI RECENTI &nbsp;/&nbsp;
+              PROGETTI RECENTI &nbsp;/&nbsp; PROGETTI RECENTI &nbsp;/&nbsp;
+            </span>
+          </div>
         </div>
-        <div class="card grid" data-aos="fade-left" data-aos-offset="500">
+        <div class="projects-intro" data-aos="fade-up">
+          <span class="sys-label">[SYS.03 — WORK]</span>
+        </div>
 
-            <div class="col-50 img">
-                <a class="project" href="https://gwijacodes.github.io/myspazza/" target="_blank">
-                    <img src="./imgs/spazza-ad.jpg" alt="">
-                </a>
+        <div
+          class="project-card panel corner-cut-md reversed"
+          data-label="[PRJ-001]"
+          data-aos="fade-right"
+          data-aos-offset="100"
+        >
+          <div class="project-desc">
+            <span class="sys-label">[STATUS: WIP]</span>
+            <h3>Oh My Gin</h3>
+            <div class="chips">
+              <span class="chip">UI/UX</span><span class="chip">FRONT-END</span>
             </div>
-            <div class="col-50 des">
-                <h3>Spazza!</h3>
-                <span class="chips">
-                    <span class="chip">UI/UX</span> <span class="chip">FRONT-END</span><span class="chip">MODELLAZIONE
-                        3D</span>
-                </span>
-                <p>Questa applicazione web nasce da una domanda che, se
-                    vivi in un comune dove
-                    viene ritirata la
-                    raccolta differenziata porta a porta, ti ha tormentato almeno una volta: "Quale bidone bisogna
-                    uscire stasera?" <br>
-                    Spazza te lo ricorderà ogni giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
-                    conferire in ogni singolo bidone.</p>
-            </div>
+            <p>
+              Applicazione <strong>Next.js</strong> per accedere a un vasto
+              archivio di drink e ricette tramite
+              <a
+                href="https://www.thecocktaildb.com/api.php"
+                class="inline-link"
+                >API</a
+              >. Ancora in corso, ma puoi dare un'occhiata al repository!
+            </p>
+            <a
+              href="https://github.com/GwijaCodes/mydrink"
+              target="_blank"
+              class="btn corner-cut-sm"
+              >VIEW REPO <i class="ti ti-arrow-right"></i
+            ></a>
+          </div>
+          <div class="project-img">
+            <a href="https://github.com/GwijaCodes/mydrink" target="_blank">
+              <img src="./imgs/ohmygin.jpg" alt="Oh My Gin" loading="lazy" />
+              <span class="img-label">[PRJ-001 / OH.MY.GIN]</span>
+            </a>
+          </div>
         </div>
-        <div class="card grid reversed" data-aos="fade-right" data-aos-offset="500">
 
-            <div class="col-50 des">
-                <h3>Lucchesisucchi.it</h3>
-                <span class="chips">
-                    <span class="chip">FRONT-END</span>
+        <div
+          class="project-card panel corner-cut-md"
+          data-label="[PRJ-002]"
+          data-aos="fade-left"
+          data-aos-offset="200"
+        >
+          <div class="project-img">
+            <a href="https://gwijacodes.github.io/myspazza/" target="_blank">
+              <img src="./imgs/spazza-ad.jpg" alt="Spazza" />
+              <span class="img-label">[PRJ-002 / SPAZZA]</span>
+            </a>
+          </div>
+          <div class="project-desc">
+            <span class="sys-label">[STATUS: LIVE]</span>
+            <h3>Spazza!</h3>
+            <div class="chips">
+              <span class="chip">UI/UX</span><span class="chip">FRONT-END</span
+              ><span class="chip">3D</span>
+            </div>
+            <p>
+              Quale bidone bisogna uscire stasera? Spazza te lo ricorderà ogni
+              giorno, e sarà anche felice di ricordarti cosa puoi (e cosa non)
+              conferire in ogni singolo bidone.
+            </p>
+            <a
+              href="https://gwijacodes.github.io/myspazza/"
+              target="_blank"
+              class="btn corner-cut-sm"
+              >VAI AL PROGETTO <i class="ti ti-arrow-right"></i
+            ></a>
+          </div>
+        </div>
 
-                </span>
-                <p>Sito vetrina one-page che racconta la storia e i prodotti dell'azienda Lucchesi, produttrice di
-                    spremute surgelate e olii essenziali estratti da agrumi completamente <i>made in Sicily, based in
-                        Aci Catena.</i></p>
-            </div>
-            <div class="col-50 img">
-                <a href="https://www.lucchesisucchi.it/" target="_blank">
-                    <img src="./imgs/progetto-lucchesi.jpg" alt="" loading="lazy">
-                </a>
-            </div>
+        <div
+          class="project-card panel corner-cut-md reversed"
+          data-label="[PRJ-003]"
+          data-aos="fade-right"
+          data-aos-offset="200"
+        >
+          <div class="project-desc">
+            <span class="sys-label">[STATUS: LIVE]</span>
+            <h3>Lucchesisucchi.it</h3>
+            <div class="chips"><span class="chip">FRONT-END</span></div>
+            <p>
+              Sito vetrina one-page che racconta la storia e i prodotti
+              dell'azienda Lucchesi, produttrice di spremute surgelate e olii
+              essenziali estratti da agrumi
+              <em>made in Sicily, based in Aci Catena.</em>
+            </p>
+            <a
+              href="https://www.lucchesisucchi.it/"
+              target="_blank"
+              class="btn corner-cut-sm"
+              >VAI AL SITO <i class="ti ti-arrow-right"></i
+            ></a>
+          </div>
+          <div class="project-img">
+            <a href="https://www.lucchesisucchi.it/" target="_blank">
+              <img
+                src="./imgs/progetto-lucchesi.jpg"
+                alt="Lucchesi Succhi"
+                loading="lazy"
+              />
+              <span class="img-label">[PRJ-003 / LUCCHESI]</span>
+            </a>
+          </div>
         </div>
-        <div class="card grid" data-aos="fade-left" data-aos-offset="500">
-            <div class="col-50 img">
-                <a href="https://computermaniacireale.it/" target="_blank">
-                    <img src="./imgs/progetto-computermania.jpg" alt="" loading="lazy">
-                </a>
-            </div>
-            <div class="col-50 des">
-                <h3>Computermaniacireale.it</h3>
-                <span class="chips">
-                    <span class="chip">FRONT-END</span>
 
-                </span>
-                <p>Biglietto da visita elettronico ed essenziale per negozio di elettronica e riparazioni, one-page,
-                    animato.</p>
-            </div>
+        <div
+          class="project-card panel corner-cut-md"
+          data-label="[PRJ-004]"
+          data-aos="fade-left"
+          data-aos-offset="200"
+        >
+          <div class="project-img">
+            <a href="https://computermaniacireale.it/" target="_blank">
+              <img
+                src="./imgs/progetto-computermania.jpg"
+                alt="Computer Mania Acireale"
+                loading="lazy"
+              />
+              <span class="img-label">[PRJ-004 / COMPUTERMANIA]</span>
+            </a>
+          </div>
+          <div class="project-desc">
+            <span class="sys-label">[STATUS: LIVE]</span>
+            <h3>Computermaniacireale.it</h3>
+            <div class="chips"><span class="chip">FRONT-END</span></div>
+            <p>
+              Biglietto da visita elettronico ed essenziale per negozio di
+              elettronica e riparazioni, one-page, animato.
+            </p>
+            <a
+              href="https://computermaniacireale.it/"
+              target="_blank"
+              class="btn corner-cut-sm"
+              >VAI AL SITO <i class="ti ti-arrow-right"></i
+            ></a>
+          </div>
         </div>
-    </div>
+      </section>
+    </main>
 
-    <div class="contacts section">
-        <img src="./imgs/skillset.svg" alt="" class="contacts-bg">
-        <div class="title">
-            <h2 class="title-h2">CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI CONTATTAMI </h2>
+    <!-- ═══ CONTACTS -->
+    <section class="contacts section">
+      <div class="section-title-bar">
+        <div class="marquee-track">
+          <span
+            >CONTATTAMI &nbsp;/&nbsp; CONTATTAMI &nbsp;/&nbsp; CONTATTAMI
+            &nbsp;/&nbsp; CONTATTAMI &nbsp;/&nbsp; CONTATTAMI &nbsp;/&nbsp;
+          </span>
         </div>
-        <div class="grid">
-            <div class="col-50">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <div class="contact-form">
-                        <input type="hidden" name="access_key" value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f">
-                        <input type="text" name="name" placeholder="Il tuo Nome" class="contact-inputs" required>
-                        <input type="email" name="email" placeholder="La tua Email" class="contact-inputs" required>
-                        <textarea name="message" placeholder="Il tuo Messaggio" class="contact-inputs"
-                            required></textarea>
-                        <button class="button" type="submit">INVIA</button>
-                </form>
+      </div>
+      <div class="contacts-grid">
+        <div class="contacts-form-wrap" data-aos="fade-right">
+          <span class="sys-label">[SYS.04 — CONTACT]</span>
+          <h2>CONTATTAMI</h2>
+          <div class="divider"></div>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="ec0b52d6-ec0d-4a16-941f-d17c2f37b73f"
+            />
+            <div class="form-field">
+              <label class="form-label">[NOME]</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Il tuo nome"
+                class="contact-input"
+                required
+              />
             </div>
-        </div>
-        <div class="col-50">
-            <img data-aos="fade-right" data-aos-delay="300" class="img-res" loading="lazy" src="./imgs/ohno.png" alt="">
-        </div>
-        <div class="final">
-            <div>
-                <a href="https://www.iubenda.com/privacy-policy/89294495" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-                <a href="https://www.iubenda.com/privacy-policy/89294495/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            <div class="form-field">
+              <label class="form-label">[EMAIL]</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="La tua email"
+                class="contact-input"
+                required
+              />
             </div>
-            <div class="final-icons">
-                <a href="mailto:gloriasaija2000@gmail.com">
-                    <img src="./imgs/icons/email.svg" fill="currentColor" style="width: 50px;" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/gloria-saija-a3816b217">
-                    <img src="./imgs/icons/linkedin.svg" style="width: 40px;" alt="">
-                </a>
-                <a href="https://github.com/GwijaCodes">
-                    <img src="./imgs/icons/github.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
-                <a href="https://www.instagram.com/gwija.js/">
-                    <img src="./imgs/icons/instagram.svg" fill="currentColor" style="width: 40px;" alt="">
-                </a>
+            <div class="form-field">
+              <label class="form-label">[MSG]</label>
+              <textarea
+                name="message"
+                placeholder="Il tuo messaggio"
+                class="contact-input contact-textarea"
+                required
+              ></textarea>
             </div>
+            <button class="btn corner-cut-sm" type="submit">
+              INVIA MESSAGGIO <i class="ti ti-send"></i>
+            </button>
+          </form>
+          <div class="contact-data-block">
+            <p class="contact-data">
+              <span>[LOC]</span> Acireale (CT), Sicily, Italy
+            </p>
+            <p class="contact-data">
+              <span>[MAIL]</span> gloriasaija2000@gmail.com
+            </p>
+            <p class="contact-data"><span>[TEL]</span> (+39) 328-658-7253</p>
+          </div>
         </div>
-    </div>
-    </div>
+        <div
+          class="contacts-img-wrap"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <img class="contacts-deco" src="./imgs/ohno.png" alt="" />
+        </div>
+      </div>
 
+      <div class="footer-bar">
+        <div class="footer-legal">
+          <a
+            href="https://www.iubenda.com/privacy-policy/89294495"
+            class="iubenda-black iubenda-noiframe iubenda-embed"
+            title="Privacy Policy"
+            >Privacy Policy</a
+          >
+          <script type="text/javascript">
+            (function (w, d) {
+              var loader = function () {
+                var s = d.createElement("script"),
+                  tag = d.getElementsByTagName("script")[0];
+                s.src = "https://cdn.iubenda.com/iubenda.js";
+                tag.parentNode.insertBefore(s, tag);
+              };
+              if (w.addEventListener) {
+                w.addEventListener("load", loader, false);
+              } else if (w.attachEvent) {
+                w.attachEvent("onload", loader);
+              } else {
+                w.onload = loader;
+              }
+            })(window, document);
+          </script>
+          <span class="nav-sep">│</span>
+          <a
+            href="https://www.iubenda.com/privacy-policy/89294495/cookie-policy"
+            class="iubenda-black iubenda-noiframe iubenda-embed"
+            title="Cookie Policy"
+            >Cookie Policy</a
+          >
+          <script type="text/javascript">
+            (function (w, d) {
+              var loader = function () {
+                var s = d.createElement("script"),
+                  tag = d.getElementsByTagName("script")[0];
+                s.src = "https://cdn.iubenda.com/iubenda.js";
+                tag.parentNode.insertBefore(s, tag);
+              };
+              if (w.addEventListener) {
+                w.addEventListener("load", loader, false);
+              } else if (w.attachEvent) {
+                w.attachEvent("onload", loader);
+              } else {
+                w.onload = loader;
+              }
+            })(window, document);
+          </script>
+        </div>
+        <div class="icons footer-icons">
+          <a href="mailto:gloriasaija2000@gmail.com" aria-label="Email"
+            ><img src="./imgs/icons/email.svg" style="width: 22px" alt="Email"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/gloria-saija-a3816b217"
+            aria-label="LinkedIn"
+            ><img
+              src="./imgs/icons/linkedin.svg"
+              style="width: 18px"
+              alt="LinkedIn"
+          /></a>
+          <a href="https://github.com/GwijaCodes" aria-label="GitHub"
+            ><img
+              src="./imgs/icons/github.svg"
+              style="width: 20px"
+              alt="GitHub"
+          /></a>
+          <a href="https://www.instagram.com/gwija.js/" aria-label="Instagram"
+            ><img
+              src="./imgs/icons/instagram.svg"
+              style="width: 20px"
+              alt="Instagram"
+          /></a>
+        </div>
+        <p class="footer-sig">© 2024 GS.EXE — ALL SYSTEMS NOMINAL</p>
+      </div>
+    </section>
+
+    <!-- ═══ SCRIPTS -->
     <script>
-        const loaderBar = document.querySelector('.loader-bar');
-        const loader = document.querySelector('.loader');
+      // LOADER
+      const loaderBar = document.querySelector(".loader-bar");
+      const loaderPct = document.querySelector(".loader-pct");
+      const loaderMsg = document.querySelector(".loader-msg");
+      const loader = document.querySelector(".loader");
+      const msgs = [
+        "INITIALIZING SYSTEMS...",
+        "LOADING ASSETS...",
+        "RENDERING INTERFACE...",
+        "ALL SYSTEMS GO.",
+      ];
+      let pct = 0;
+      const tick = setInterval(() => {
+        pct = Math.min(pct + Math.floor(Math.random() * 12 + 4), 90);
+        loaderBar.style.width = pct + "%";
+        loaderPct.textContent = pct + "%";
+        loaderMsg.textContent = msgs[Math.floor(pct / 25)] || msgs[3];
+      }, 80);
+      window.addEventListener("load", () => {
+        clearInterval(tick);
+        loaderBar.style.width = "100%";
+        loaderPct.textContent = "100%";
+        loaderMsg.textContent = "[OK] ALL SYSTEMS NOMINAL";
         setTimeout(() => {
-            loaderBar.style.width = '30vw';
-            console.log('ready')
-        }, 50)
-        window.addEventListener('load', () => {
-            console.log('set')
-            loaderBar.style.width = '100vw'
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500)
-        })
+          loader.classList.add("loader-done");
+          setTimeout(() => (loader.style.display = "none"), 400);
+        }, 500);
+      });
 
-        //background scroll parallax
-        // window.addEventListener('scroll', () => {
-        //     const distance = window.scrollY;
-        //     const bg = document.querySelector('.background').style.backgroundPositionY = `${distance / 1.5}px`;
-        
-        // })
-        
-        const bg = document.querySelector('.background');
-        const intro = document.querySelector('.intro');
-        
-        document.body.onpointermove = e => {
-            const {clientX, clientY} = e;
-
-            bg.animate({
-                backgroundPositionX: `${-clientX/80}px`,
-                backgroundPositionY: `${-clientY/70}px`
-            },{duration: 1000, fill: "forwards"})
-            intro.animate({
-                transform: `translate(${-clientX/50}px, ${-clientY/40}px)`,
-            },{duration: 200, fill: "forwards"})
-        }
-
+      // PARALLAX
+      const bg = document.querySelector(".background");
+      const intro = document.querySelector(".hero-content");
+      document.body.onpointermove = (e) => {
+        const { clientX, clientY } = e;
+        bg.animate(
+          {
+            backgroundPositionX: `${-clientX / 80}px`,
+            backgroundPositionY: `${-clientY / 70}px`,
+          },
+          { duration: 1000, fill: "forwards" }
+        );
+        intro.animate(
+          { transform: `translate(${-clientX / 50}px, ${-clientY / 40}px)` },
+          { duration: 200, fill: "forwards" }
+        );
+      };
     </script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init({ once: true, duration: 500, easing: "ease-out" });
     </script>
-
-</body>
-
+  </body>
 </html>
