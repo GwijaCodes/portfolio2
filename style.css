@@ -752,21 +752,59 @@ header {
 }
 
 .build-grid {
-    margin-top: 5%;
+    perspective: 1200px;
+    transform-origin: center;
 }
 
 .build-card {
     border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 40px;
+    transition: transform 400ms ease, border-color 300ms ease;
+    
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.build-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.build-header i {
+    font-size: 28px;
+    color: var(--giallo);
+    border: 1px solid var(--giallo);
+    padding: 10px;
+    border-radius: 8px;
     transition: all 300ms ease;
 }
 
 .build-card h3 {
-    margin-bottom: 20px;
+    margin: 0;
     color: var(--giallo);
 }
 
 .build-card:hover {
+    transform: rotateX(-6deg) rotateY(8deg) translateY(-6px);
     border-color: var(--blu);
-    transform: translateY(-6px);
+}
+
+.build-card:hover .build-header i {
+    color: var(--blu);
+    border-color: var(--blu);
+}
+
+.build-card i,
+.build-card h3,
+.build-card p {
+    transform: translateZ(0);
+    transition: transform 300ms ease;
+    will-change: transform;
+}
+.build-card i:hover,
+.build-card h3:hover,
+.build-card p:hover {
+    transform: translateZ(30px);
 }
