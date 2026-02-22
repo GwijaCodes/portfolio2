@@ -458,6 +458,8 @@ p {
 /* ─── HERO ───────────────────────────────────────────────────── */
 .intro {
     min-height: 100svh;
+    width: fit-content;
+    margin: auto;
     padding-top: 40px;
     display: flex;
     align-items: center;
@@ -514,7 +516,7 @@ p {
     object-fit: contain;
     mix-blend-mode: lighten;
     opacity: 0.85;
-    filter: invert(0.2) saturate(1.5) hue-rotate(220deg) brightness(1.2);
+    
 }
 
 /* ─── ABOUT ──────────────────────────────────────────────────── */
