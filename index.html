@@ -29,12 +29,10 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://gwijacodes.github.io/portfolio2/" />
 
-    <!-- Critical: Preconnect to font servers -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     
-    <!-- Critical: Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
     
     <!-- Preload Google Fonts with font-display=swap for optimal loading -->
@@ -43,7 +41,6 @@
       rel="stylesheet"
     />
     
-    <!-- Non-critical: Tabler Icons (deferred via media) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css"
@@ -53,7 +50,6 @@
       onload="this.media='all'"
     />
     
-    <!-- Non-critical: AOS animations (deferred via media) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
     
     <link
@@ -63,7 +59,6 @@
     />
     <title>Gloria Saija | Frontend Developer</title>
     
-    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -93,7 +88,6 @@
     </script>
   </head>
   <body>
-    <!-- ═══ LOADER -->
     <div class="loader">
       <div class="loader-header">
         <span class="loader-id">GS.EXE</span>
@@ -113,10 +107,8 @@
       </div>
     </div>
 
-    <!-- ═══ BG PARALLAX -->
     <div class="background"></div>
 
-    <!-- ═══ NAV HUD -->
     <nav class="hud-bar">
       <span class="nav-id">
         <a href="#"
@@ -170,7 +162,6 @@
         );
     </script>
 
-    <!-- ═══ HERO -->
     <header class="intro scanlines">
       <div class="hero-content">
         <span class="sys-label">[SYS.INIT] — PORTFOLIO v2.0</span>
@@ -216,7 +207,6 @@
     </header>
 
     <main>
-      <!-- ═══ ABOUT ME -->
       <section class="about-me section">
         <div class="section-title-bar">
           <div class="marquee-track">
@@ -225,8 +215,7 @@
               &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT
               ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp;
             </span>
-            <!-- this must be duplicated to create infinite effect -->
-                    <span
+            <span
               >ABOUT ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT ME
               &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp; ABOUT
               ME &nbsp;/&nbsp; ABOUT ME &nbsp;/&nbsp;
@@ -302,7 +291,6 @@
         </div>
       </section>
 
-      <!-- ═══ WHAT I BUILD -->
       <section class="what-i-build section">
         <div class="section-title-bar">
           <div class="marquee-track">
@@ -417,7 +405,6 @@
       </section>
     </main>
 
-    <!-- ═══ CONTACTS -->
     <section class="contacts section">
       <div class="section-title-bar">
         <div class="marquee-track">
@@ -425,7 +412,7 @@
             >CONTACTS &nbsp;/&nbsp; CONTACTS &nbsp;/&nbsp; CONTACTS
             &nbsp;/&nbsp; CONTACTS &nbsp;/&nbsp; CONTACTS &nbsp;/&nbsp;
           </span>
-                 <span
+        <span
             >CONTACTS &nbsp;/&nbsp; CONTACTS &nbsp;/&nbsp; CONTACTS
             &nbsp;/&nbsp; CONTACTS &nbsp;/&nbsp; CONTACTS &nbsp;/&nbsp;
           </span>
@@ -539,9 +526,7 @@
       </div>
     </section>
 
-    <!-- ═══ CRITICAL INLINE SCRIPTS (runs immediately) -->
     <script>
-      // LOADER - Critical for UX, runs first
       const loaderBar = document.querySelector(".loader-bar");
       const loaderPct = document.querySelector(".loader-pct");
       const loaderMsg = document.querySelector(".loader-msg");
@@ -560,7 +545,6 @@
         loaderMsg.textContent = msgs[Math.floor(pct / 25)] || msgs[3];
       }, 80);
       
-      // requestIdleCallback fallback for iOS and unsupported browsers
       const scheduleIdleCallback = window.requestIdleCallback 
         ? window.requestIdleCallback.bind(window) 
         : (cb) => setTimeout(cb, 0);
@@ -576,7 +560,6 @@
         }, 500);
       });
 
-      // PARALLAX
       const bg = document.querySelector(".background");
       const intro = document.querySelector(".hero-content");
       document.body.onpointermove = (e) => {
@@ -595,11 +578,8 @@
       };
     </script>
 
-    <!-- ═══ DEFERRED NON-CRITICAL SCRIPTS -->
-    <!-- Cookie consent script (deferred - not critical for FCP) -->
     <script type="text/javascript" charset="UTF-8" src="https://cdn.cookie-script.com/s/9a9166879085fbc5d9701893f14e813e.js" defer></script>
     
-    <!-- AOS animations (deferred - loads after page render) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script defer>
       document.addEventListener('DOMContentLoaded', () => {
