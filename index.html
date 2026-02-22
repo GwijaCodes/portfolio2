@@ -56,7 +56,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="shortcut icon"
-      href="./imgs/icons/favicon.ico"
+      href="./assets/icons/favicon.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
@@ -91,7 +91,7 @@
       <span class="nav-id">
         <a href="#"
           ><img
-            src="./imgs/icons/nav-ico.png"
+            src="./assets/icons/nav-ico.png"
             alt="GS"
             style="width: 14px; opacity: 0.7"
           />
@@ -103,7 +103,9 @@
         <ul>
           <li id="aboutme" data-index="01">ABOUT</li>
           <span class="nav-sep">│</span>
-          <li id="contatti" data-index="02">CONTACT</li>
+          <li id="whatibuild" data-index="02">WHAT I BUILD</li>
+          <span class="nav-sep">│</span>
+          <li id="contatti" data-index="03">CONTACT</li>
         </ul>
       </div>
       <span class="nav-status">▓▓▓ ONLINE</span>
@@ -120,6 +122,13 @@
         .addEventListener("click", () =>
           document
             .querySelector(".about-me")
+            .scrollIntoView({ behavior: "smooth" })
+        );
+      document
+        .querySelector("#whatibuild")
+        .addEventListener("click", () =>
+          document
+            .querySelector(".what-i-build")
             .scrollIntoView({ behavior: "smooth" })
         );
       document
@@ -144,28 +153,28 @@
         </div>
         <div class="icons">
           <a href="mailto:gloriasaija2000@gmail.com" aria-label="Email">
-            <img src="./imgs/icons/email.svg" style="width: 46px" alt="Email" />
+            <img src="./assets/icons/email.svg" style="width: 46px" alt="Email" />
           </a>
           <a
             href="https://www.linkedin.com/in/gloria-saija-a3816b217"
             aria-label="LinkedIn"
           >
             <img
-              src="./imgs/icons/linkedin.svg"
+              src="./assets/icons/linkedin.svg"
               style="width: 36px"
               alt="LinkedIn"
             />
           </a>
           <a href="https://github.com/GwijaCodes" aria-label="GitHub">
             <img
-              src="./imgs/icons/github.svg"
+              src="./assets/icons/github.svg"
               style="width: 36px"
               alt="GitHub"
             />
           </a>
           <a href="https://www.instagram.com/gwija.js/" aria-label="Instagram">
             <img
-              src="./imgs/icons/instagram.svg"
+              src="./assets/icons/instagram.svg"
               style="width: 36px"
               alt="Instagram"
             />
@@ -175,7 +184,7 @@
       <div class="hero-video-wrap">
         <video
           class="rotating-head"
-          src="./imgs/rotatehead.webm"
+          src="./assets/rotatehead.webm"
           autoplay
           loop
           playsinline
@@ -241,13 +250,13 @@
               lavoro di gruppo una vera forza, e ultima ma non meno importante:
               <strong>saper usare Google</strong>.<br />
               Non ci credi?
-              <a href="./imgs/SaijaGloria_CV.pdf" class="inline-link"
+              <a href="./assets/SaijaGloria_CV.pdf" download="SaijaGloria_CV.pdf" class="inline-link"
                 >Scarica il mio curriculum</a
               >
             </p>
             <img
               data-aos="fade-left"
-              src="./imgs/pic.png"
+              src="./assets/pic.png"
               alt="Gloria Saija"
               class="about-pic"
             />
@@ -259,12 +268,12 @@
           >
             <video
               class="about-video"
-              src="./imgs/dancedance.webm"
+              src="./assets/dancedance.webm"
               autoplay
               loop
               playsinline
               muted
-              poster="./imgs/poster.jpg"
+              poster="./assets/poster.jpg"
             ></video>
           </div>
         </div>
@@ -289,8 +298,8 @@
         <div class="build-intro" data-aos="fade-up">
           <span class="sys-label">[SYS.02 — SKILLS]</span>
           <p class="section-intro">
-            Costruisco codice production ready per frontend in ambienti dinamici. Il mio focus è su
-             chiarezza, scalabilità e consegna di valore reale.
+            Costruisco codice production ready per frontend in ambienti dinamici. 
+            Il mio focus è su chiarezza, scalabilità e creazione di valore reale.
           </p>
         </div>
         <div class="build-grid">
@@ -461,7 +470,7 @@
           data-aos="fade-left"
           data-aos-delay="200"
         >
-          <img class="contacts-deco" src="./imgs/ohno.png" alt="" />
+          <img class="contacts-deco" src="./assets/ohno.png" alt="" />
         </div>
       </div>
 
@@ -517,25 +526,25 @@
         </div>
         <div class="icons footer-icons">
           <a href="mailto:gloriasaija2000@gmail.com" aria-label="Email"
-            ><img src="./imgs/icons/email.svg" style="width: 22px" alt="Email"
+            ><img src="./assets/icons/email.svg" style="width: 22px" alt="Email"
           /></a>
           <a
             href="https://www.linkedin.com/in/gloria-saija-a3816b217"
             aria-label="LinkedIn"
             ><img
-              src="./imgs/icons/linkedin.svg"
+              src="./assets/icons/linkedin.svg"
               style="width: 18px"
               alt="LinkedIn"
           /></a>
           <a href="https://github.com/GwijaCodes" aria-label="GitHub"
             ><img
-              src="./imgs/icons/github.svg"
+              src="./assets/icons/github.svg"
               style="width: 20px"
               alt="GitHub"
           /></a>
           <a href="https://www.instagram.com/gwija.js/" aria-label="Instagram"
             ><img
-              src="./imgs/icons/instagram.svg"
+              src="./assets/icons/instagram.svg"
               style="width: 20px"
               alt="Instagram"
           /></a>
