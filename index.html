@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=IBM+Plex+Mono:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=IBM+Plex+Mono:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -563,7 +563,7 @@
         loaderPct.textContent = pct + "%";
         loaderMsg.textContent = msgs[Math.floor(pct / 25)] || msgs[3];
       }, 80);
-      window.addEventListener("load", () => {
+      requestIdleCallback(() => {
         clearInterval(tick);
         loaderBar.style.width = "100%";
         loaderPct.textContent = "100%";

@@ -3,11 +3,6 @@
    Industrial Brutalist × Evangelion HUD — UIKIT v1.0
 ═══════════════════════════════════════════════════════════════ */
 
-@font-face {
-    font-family: 'Monofonto';
-    src: url('./assets/monofonto rg.otf');
-}
-
 /* ─── ROOT VARIABLES ─────────────────────────────────────────── */
 :root {
     --col-black:    #0d0d0d;
@@ -24,7 +19,7 @@
     --col-scan:     rgba(255, 208, 42, 0.03);
     --col-glow:     rgba(255, 208, 42, 0.15);
 
-    --font-display: 'Monofonto', monospace;
+    --font-display: 'Space Mono', monospace;
     --font-brutal:  'Barlow Condensed', sans-serif;
     --font-system:  'IBM Plex Mono', monospace;
 
