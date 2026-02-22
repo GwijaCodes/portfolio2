@@ -867,6 +867,8 @@ p {
     h1 { font-size: clamp(32px, 9vw, 56px); }
     .hero-meta { flex-direction: column; gap: 6px; }
 
+    .about-text { padding: var(--space-xl) var(--space-lg) var(--space-lg); }
+
     .build-grid { grid-template-columns: 1fr; }
 
     .contacts-grid { grid-template-columns: 1fr; }
