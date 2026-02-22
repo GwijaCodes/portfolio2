@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
   <head>
-    <!-- COOKIE SCRIPT CONSENT -->
-    <script type="text/javascript" charset="UTF-8" src="https://cdn.cookie-script.com/s/9a9166879085fbc5d9701893f14e813e.js"></script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -32,25 +29,38 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://gwijacodes.github.io/portfolio2/" />
 
+    <!-- Critical: Preconnect to font servers -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Critical: Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Preload Google Fonts with font-display=swap for optimal loading -->
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=IBM+Plex+Mono:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Non-critical: Tabler Icons (deferred via media) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      media="print"
+      onload="this.media='all'"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Non-critical: AOS animations (deferred via media) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    
     <link
       rel="shortcut icon"
       href="./assets/icons/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="style.css" />
     <title>Gloria Saija | Frontend Developer</title>
     
     <!-- JSON-LD Structured Data -->
@@ -529,9 +539,9 @@
       </div>
     </section>
 
-    <!-- ═══ SCRIPTS -->
+    <!-- ═══ CRITICAL INLINE SCRIPTS (runs immediately) -->
     <script>
-      // LOADER
+      // LOADER - Critical for UX, runs first
       const loaderBar = document.querySelector(".loader-bar");
       const loaderPct = document.querySelector(".loader-pct");
       const loaderMsg = document.querySelector(".loader-msg");
@@ -549,7 +559,13 @@
         loaderPct.textContent = pct + "%";
         loaderMsg.textContent = msgs[Math.floor(pct / 25)] || msgs[3];
       }, 80);
-      requestIdleCallback(() => {
+      
+      // requestIdleCallback fallback for iOS and unsupported browsers
+      const scheduleIdleCallback = window.requestIdleCallback 
+        ? window.requestIdleCallback.bind(window) 
+        : (cb) => setTimeout(cb, 0);
+      
+      scheduleIdleCallback(() => {
         clearInterval(tick);
         loaderBar.style.width = "100%";
         loaderPct.textContent = "100%";
@@ -578,9 +594,19 @@
         );
       };
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ once: true, duration: 500, easing: "ease-out" });
+
+    <!-- ═══ DEFERRED NON-CRITICAL SCRIPTS -->
+    <!-- Cookie consent script (deferred - not critical for FCP) -->
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.cookie-script.com/s/9a9166879085fbc5d9701893f14e813e.js" defer></script>
+    
+    <!-- AOS animations (deferred - loads after page render) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({ once: true, duration: 500, easing: "ease-out" });
+        }
+      });
     </script>
   </body>
 </html>
