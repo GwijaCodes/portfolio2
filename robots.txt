@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: *.pdf$
+
+Crawl-delay: 1
+
+Sitemap: https://gwijacodes.github.io/portfolio2/sitemap.xml
